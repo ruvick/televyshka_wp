@@ -5,14 +5,14 @@
 <main class="page">
 
 <section id="main-banner" class="main-banner">
-	<div class="main-banner__nuar_blk nuar_blk"></div>
+	<div class="main-banner__nuar_blk nuar_blk"></div> 
 	<div class="_container">
 
 		<h1 class="main-banner__title">
 			Сеть АЗС <br>
 			«Телевышка»
 		</h1>
-		<p class="main-banner__subtitle">
+		<p class="main-banner__subtitle"> 
 			Качественное топливо <br>
 			по выгодным ценам
 		</p>
