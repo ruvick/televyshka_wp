@@ -17,23 +17,14 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
       //   ->set_width(30),
       // Field::make( 'image', 'as_logo_white', 'Логотип в подвале')
       //   ->set_width(30),
-      Field::make('text', 'about_home_title', 'Заголовок на главной'), 
+      Field::make('image', 'main-baner_img', 'Картинка банера')
+      ->set_width(50),
+      Field::make('text', 'main-baner_title', 'Заголовок банера')
+      ->set_width(50),
+      Field::make('text', 'main-baner_subtitle', 'Подзаголовок банера')
+      ->set_width(50),
+      Field::make('text', 'about_home_title', 'Заголовок о нас'), 
       Field::make('rich_text', 'about_home', 'О нашей компании')
-    ))
-    ->add_tab('Слайдер', array(
-      Field::make('complex', 'slider_index', 'Слайдер на главной')
-        ->add_fields(array(
-          Field::make('image', 'slider_img', 'Картинка слайдера')
-            ->set_width(50),
-          Field::make('text', 'slider_title', 'Заголовок слайдера')
-            ->set_width(50),
-          // Field::make('text', 'slider_subtitle', 'Подзаголовок слайдера')
-          //   ->set_width(50),
-          // Field::make('text', 'slider_link', 'Ссылка в кнопке')
-          //   ->set_width(50),
-          // Field::make('text', 'slider_link_text', 'Текст в кнопке')
-          //   ->set_width(50),
-        ))
     ))
     ->add_tab('Разделы', array(
       Field::make('complex', 'complex_sections', 'Разделы на главной')

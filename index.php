@@ -4,18 +4,25 @@
 
 <main class="page">
 
-<section id="main-banner" class="main-banner">
+<?php 
+		$banner = wp_get_attachment_image_src( carbon_get_theme_option('main-baner_img'), 'full')[0];
+			if(empty($banner)) {
+		$banner = get_template_directory_uri() . '/img/main-banner.jpg';
+	} ?>
+
+<section id="main-banner" class="main-banner" style="background-image: url(<?php echo $banner?>);">
 	<div class="main-banner__nuar_blk nuar_blk"></div> 
 	<div class="_container">
 
-		<h1 class="main-banner__title">
-			Сеть АЗС <br>
-			«Телевышка»
-		</h1>
-		<p class="main-banner__subtitle"> 
-			Качественное топливо <br>
-			по выгодным ценам
-		</p>
+	<? $mainBanerTitle = carbon_get_theme_option("main-baner_title");
+		if (!empty($mainBanerTitle)) { ?>
+		<h1 class="main-banner__title"><? echo $mainBanerTitle; ?></h1>
+	<? } ?>
+
+	<? $mainBanerSubTitle = carbon_get_theme_option("main-baner_subtitle");
+		if (!empty($mainBanerTitle)) { ?>
+		<p class="main-banner__subtitle"><? echo $mainBanerSubTitle; ?></p>
+	<? } ?>
 
 		<div class="main-banner__iconBlock">
 			<div class="main-banner__iconBlock-item main-banner__iconBlock-item_01"></div>
@@ -31,14 +38,12 @@
 <section id="about" class="about section">
 	<div class="_container">
 
-		<h2 class="about__title">Коротко о нашей сети</h2>
+	<? $abouttc = carbon_get_theme_option("about_home");
+	if (!empty($abouttc)) { ?>
+		<h2 class="about__title"><?php echo carbon_get_theme_option('about_home_title'); ?></h2>
 		<div class="about__title-line title-line"></div>
-		<p class="about__subtitle">
-			На рынке с 90-х годов. Наша сеть реализует фирменное топливо, полностью соответствующее ГОСТ. Весь товар
-			абсолютно конкурентен на рынке топливного ритейла. Фирменной чертой отличия от других сетей для нас является
-			не только качество, но и выгодная цена. Именно это позволяет нам ежедневно расширять клиентскую базу и
-			повышать лояльность к нашей сети AZS.
-		</p>
+		<p class="about__subtitle"><? echo $abouttc; ?></p>
+	<? } ?>
 
 		<div class="about__imageBlock">
 			<div class="about__imageBlock-nuar_blk nuar_blk"></div>
