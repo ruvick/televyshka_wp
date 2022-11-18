@@ -2,48 +2,48 @@
 
 <div class="our-gas__inner d-flex">
 
-  <a href="#" class="our-gas__card our-gas__card_01">
+  <a href="<?php echo get_permalink(24);?>" class="our-gas__card our-gas__card_01">
     <div class="our-gas__card-descpBlock">
       <div class="our-gas__card-descpBlock-icon"></div>
-      <div class="our-gas__card-descpBlock-text">АЗС №01</div>
+      <div class="our-gas__card-descpBlock-text">50лет октября 124б</div>
     </div>
   </a>
 
-  <a href="#" class="our-gas__card our-gas__card_02">
+  <a href="<?php echo get_permalink(24);?>" class="our-gas__card our-gas__card_02">
     <div class="our-gas__card-descpBlock">
       <div class="our-gas__card-descpBlock-icon"></div>
-      <div class="our-gas__card-descpBlock-text">АЗС №03</div>
+      <div class="our-gas__card-descpBlock-text">с.Беседино</div>
     </div>
   </a>
 
-  <a href="#" class="our-gas__card our-gas__card_03">
+  <a href="<?php echo get_permalink(24);?>" class="our-gas__card our-gas__card_03">
     <div class="our-gas__card-descpBlock">
       <div class="our-gas__card-descpBlock-icon"></div>
-      <div class="our-gas__card-descpBlock-text">АЗС №02</div>
+      <div class="our-gas__card-descpBlock-text">д.Катырина д.74</div>
     </div>
   </a>
 
-  <a href="#" class="our-gas__card our-gas__card_04">
+  <a href="<?php echo get_permalink(24);?>" class="our-gas__card our-gas__card_04">
     <div class="our-gas__card-descpBlock">
       <div class="our-gas__card-descpBlock-icon"></div>
-      <div class="our-gas__card-descpBlock-text">АЗС №04</div>
+      <div class="our-gas__card-descpBlock-text">ул.Аропортовская д25</div>
     </div>
   </a>
 
-  <a href="#" class="our-gas__card our-gas__card_06">
+  <a href="<?php echo get_permalink(24);?>" class="our-gas__card our-gas__card_06">
     <div class="our-gas__card-descpBlock">
       <div class="our-gas__card-descpBlock-icon"></div>
-      <div class="our-gas__card-descpBlock-text">АЗС №05</div>
+      <div class="our-gas__card-descpBlock-text">Белг обл., Яковлевский рн., 633км трасса Москва-Харьков</div>
     </div>
   </a>
 
 </div>
 
 <div class="our-gas__inner our-gas__inner-big d-flex">
-  <a href="#" class="our-gas__card our-gas__card-big our-gas__card_05">
+  <a href="<?php echo get_permalink(24);?>" class="our-gas__card our-gas__card-big our-gas__card_05">
     <div class="our-gas__card-descpBlock">
       <div class="our-gas__card-descpBlock-icon"></div>
-      <div class="our-gas__card-descpBlock-text">АЗС №06</div>
+      <div class="our-gas__card-descpBlock-text">д.Курица</div>
     </div>
   </a>
 </div>

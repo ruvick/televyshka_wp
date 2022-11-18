@@ -4159,8 +4159,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-align: self-end;
   -ms-flex-align: self-end;
   align-items: self-end;
-  max-width: 252px;
-  width: 100%;
+  /* max-width: 252px;
+  width: 100%; */
 }
 
 .our-gas__card-descpBlock-icon {
@@ -4185,7 +4185,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   width: 100%;
   font-size: 24px;
   font-weight: 700;
-  padding: 12px 12px 12px 40px;
+  padding: 12px 25px 12px 40px;
   margin-left: -25px;
   background: #fff;
   border-radius: 0 30px 30px 0;
@@ -4195,8 +4195,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .our-gas__inner-big {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 446px;
-  flex: 0 1 446px;
+  -ms-flex: 0 0 446px;
+  flex: 0 0 446px;
   height: auto;
 }
 
@@ -4322,6 +4322,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .gas-icon-block .our-gas__card-descpBlock {
+  max-width: 252px;
+  width: 100%;
   margin-right: 46px;
 }
 
@@ -4346,6 +4348,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .service-icon-block .our-gas__card-descpBlock {
+  max-width: 252px;
+  width: 100%;
   margin-right: 26px;
 }
 
