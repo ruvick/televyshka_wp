@@ -24,7 +24,7 @@ get_header(); ?>
 	<div class="_container">
 		<h1 class="pageBanner__title">
 			АЗС: <br>
-			50 лет октября <br>
+			50 лет октября <br> 
 			124 б
 		</h1>
 	</div>

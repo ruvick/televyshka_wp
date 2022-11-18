@@ -5,12 +5,8 @@
 
 			<a href="<? bloginfo("url"); ?>" class="logo-icon footer__logo"></a>
 
-			<ul class="footer__menu d-flex">
-				<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Главная</a></li>
-				<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Заправки</a></li>
-				<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Бонусная программа </a></li>
-				<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Контакты</a></li>
-			</ul>
+			<?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'footer__menu d-flex',
+				'container_class' => 'footer__menu d-flex','container' => false )); ?> 
 
 			<div class="footer__contacts">
 				<div class="footer__contacts-phone contacts-phone-block">

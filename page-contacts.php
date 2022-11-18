@@ -10,16 +10,22 @@ get_header(); ?>
 <?php get_template_part('template-parts/header-section');?>
 
 <main class="page">
-  <section class="content">
-  <div class="_container">
+
+<section id="pageBanner" class="pageBanner banner">
+	<div class="banner__nuar_blk nuar_blk"></div>
+	<div class="_container">
+		<h1 class="pageBanner__title"><? the_title();?></h1>
+	</div>
+</section>
+
+<section class="recurring content">
+	<div class="_container">
 
   <?php
-			if ( function_exists('yoast_breadcrumb') ) {
-				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
-			}
-			?> 
-
-	<h1><? the_title();?></h1> 
+		if ( function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
+		}
+	?> 
 
   <ul> 
 	  <? $org = carbon_get_theme_option("as_company"); if (!empty($org)){?><li>Организация: <strong><? echo $org; ?></strong></li><?}?> 
@@ -54,17 +60,17 @@ get_header(); ?>
 				var myGeoObjects = [];
 
     // Указываем координаты метки
-    myGeoObjects = new ymaps.Placemark([<?php echo carbon_get_theme_option('map_point') ?>],{
-    								// hintContent: '<div class="map-hint">Авто профи, Курск, ул.Комарова, 16</div>',
-    								balloonContent: '<div class="map-hint"><?php echo carbon_get_theme_option('text_map') ?>', },{
-    								iconLayout: 'default#image',
-                    // Путь до нашей картинки
-                    iconImageHref:  '<?php bloginfo("template_url"); ?>/img/icons/map-marker.svg',  
-                    // Размеры иконки
-                    iconImageSize: [65, 65],
-                    // Смещение верхнего угла относительно основания иконки
-                    iconImageOffset: [-25, -100]
-                  });
+    	myGeoObjects = new ymaps.Placemark([<?php echo carbon_get_theme_option('map_point') ?>],{
+    	// hintContent: '<div class="map-hint">Авто профи, Курск, ул.Комарова, 16</div>',
+    	balloonContent: '<div class="map-hint"><?php echo carbon_get_theme_option('text_map') ?>', },{
+    	iconLayout: 'default#image',
+      // Путь до нашей картинки
+      iconImageHref:  '<?php bloginfo("template_url"); ?>/img/icons/map-azs.svg',  
+      // Размеры иконки
+      iconImageSize: [50, 75],
+      // Смещение верхнего угла относительно основания иконки
+      iconImageOffset: [-25, -100]
+    });
 
     var clusterer = new ymaps.Clusterer({
     	clusterDisableClickZoom: false,
