@@ -3,9 +3,7 @@
 
 		<div class="header__row d-flex"> 
 
-			<a href="index.html" class="logo-icon header__logo">
-				<!-- <? bloginfo("url"); ?> -->
-			</a>
+			<a href="<? bloginfo("url"); ?>" class="logo-icon header__logo"></a>
 
 			<ul class="menu-list header__menu-list d-flex">
 				<li class="menu-list__item"><a href="#" class="header__menu-list-link">Главная</a></li>
@@ -23,8 +21,8 @@
 					<a href="#" class="header__contacts-social-link contacts-social-link header__contacts-social-link_02"></a>
 				</div>
 				<div class="header__contacts-phone contacts-phone-block">
-					<a href="tel:84951700000" class="contacts-phone-block__telephone header__phone">8 800 488 22 22</a>
-					<!-- <a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>"><? echo $tel = carbon_get_theme_option("as_phone_1"); ?></a> -->
+					<? $tel = carbon_get_theme_option("as_phones_1"); 
+						if (!empty($tel)){?><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="contacts-phone-block__telephone header__phone"><? echo $tel; ?></a><?}?> 
 					<a href="#callback" class="header__popup-link _popup-link">Заказать звонок</a>
 				</div>
 			</div>
