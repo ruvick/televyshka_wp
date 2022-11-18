@@ -20,7 +20,7 @@
 					</div>
 
 					<div class="addresses__block-item">
-						<h5 class="addresses__block-item-title">Курск обл, с.Беседино</h5>
+						<h5 class="addresses__block-item-title">Курск обл, с.Беседино</h5> 
 						<!-- <p class="addresses__block-item-subtitle"></p> -->
 						<ul class="addresses__block-item-list">
 							<li class="addresses__block-item-list-item">Сервис:</li>
