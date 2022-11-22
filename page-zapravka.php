@@ -34,7 +34,25 @@ get_header(); ?>
 
 		<div class="service-icon-block gas-icon-block d-flex">
 
+		<? 
+		$zapServ = carbon_get_post_meta(get_the_ID(),"complex_services"); 
+			if ($zapServ) {
+		$zapServIndex = 0;
+			foreach ($zapServ as $item) {
+			?>
 			<div class="our-gas__card-descpBlock">
+				<div class="service-icon-block__icon-border">
+					<div class="service-icon-block__icon service-icon-block__icon_01"></div>
+				</div>
+				<div class="our-gas__card-descpBlock-text"><? echo $item['text_services']; ?></div>
+			</div>
+			<?
+			$zapServIndex++; 
+		}
+	}
+	?>
+
+			<!-- <div class="our-gas__card-descpBlock">
 				<div class="service-icon-block__icon-border">
 					<div class="service-icon-block__icon service-icon-block__icon_01"></div>
 				</div>
@@ -67,7 +85,7 @@ get_header(); ?>
 					<div class="service-icon-block__icon service-icon-block__icon_05"></div>
 				</div>
 				<div class="our-gas__card-descpBlock-text">Кофе с собой</div>
-			</div>
+			</div> -->
 
 		</div>
 
@@ -77,8 +95,23 @@ get_header(); ?>
 		<div class="recurring__title-line title-line"></div>
 
 		<div class="gas-icon-block d-flex">
-
+		<? 
+		$zapFuel = carbon_get_post_meta(get_the_ID(),"complex_fuel"); 
+			if ($zapFuel) {
+		$zapFuelIndex = 0;
+			foreach ($zapFuel as $item) {
+			?>
 			<div class="our-gas__card-descpBlock">
+				<div class="our-gas__card-descpBlock-icon our-gas-icon-black"></div>
+				<div class="our-gas__card-descpBlock-text"><? echo $item['text_fuel']; ?></div>
+			</div>
+			<?
+			$zapFuelIndex++; 
+		}
+	}
+	?>
+
+			<!-- <div class="our-gas__card-descpBlock">
 				<div class="our-gas__card-descpBlock-icon our-gas-icon-black"></div>
 				<div class="our-gas__card-descpBlock-text">Дт Евро</div>
 			</div>
@@ -96,7 +129,7 @@ get_header(); ?>
 			<div class="our-gas__card-descpBlock">
 				<div class="our-gas__card-descpBlock-icon our-gas-icon-green"></div>
 				<div class="our-gas__card-descpBlock-text">92 Евро</div>
-			</div>
+			</div> -->
 
 		</div>
 
@@ -109,43 +142,18 @@ get_header(); ?>
 
 			<div class="our-gas__inner d-flex">
 
-				<a href="#" class="our-gas__card our-gas__card_01">
-					<!-- <div class="our-gas__card-descpBlock">
-						<div class="our-gas__card-descpBlock-icon"></div>
-						<div class="our-gas__card-descpBlock-text">АЗС №01</div>
-					</div> -->
-				</a>
+				<a href="#" class="our-gas__card our-gas__card_01"></a>
 
-				<a href="#" class="our-gas__card our-gas__card_02">
-					<!-- <div class="our-gas__card-descpBlock">
-						<div class="our-gas__card-descpBlock-icon"></div>
-						<div class="our-gas__card-descpBlock-text">АЗС №03</div>
-					</div> -->
-				</a>
+				<a href="#" class="our-gas__card our-gas__card_02"></a>
 
-				<a href="#" class="our-gas__card our-gas__card_03">
-					<!-- <div class="our-gas__card-descpBlock">
-						<div class="our-gas__card-descpBlock-icon"></div>
-						<div class="our-gas__card-descpBlock-text">АЗС №02</div>
-					</div> -->
-				</a>
+				<a href="#" class="our-gas__card our-gas__card_03"></a>
 
-				<a href="#" class="our-gas__card our-gas__card_04">
-					<!-- <div class="our-gas__card-descpBlock">
-						<div class="our-gas__card-descpBlock-icon"></div>
-						<div class="our-gas__card-descpBlock-text">АЗС №04</div>
-					</div> -->
-				</a>
+				<a href="#" class="our-gas__card our-gas__card_04"></a>
 
 			</div>
 
 			<div class="our-gas__inner our-gas__inner-big d-flex">
-				<a href="#" class="our-gas__card our-gas__card-big our-gas__card_05">
-					<!-- <div class="our-gas__card-descpBlock">
-						<div class="our-gas__card-descpBlock-icon"></div>
-						<div class="our-gas__card-descpBlock-text">АЗС №06</div>
-					</div> -->
-				</a>
+				<a href="#" class="our-gas__card our-gas__card-big our-gas__card_05"></a>
 			</div>
 
 		</div>
