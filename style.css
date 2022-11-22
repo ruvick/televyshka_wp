@@ -4164,6 +4164,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .our-gas__card:nth-child(5) {
+  flex: 0 1 100%;
   margin-bottom: 0;
 }
 
@@ -4217,6 +4218,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .our-gas__card-big {
+  flex: 0 1 100%;
   width: 100%;
   height: 100%;
   margin-right: 0;
