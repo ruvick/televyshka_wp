@@ -67,12 +67,22 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
           ->set_width(50),
     ) );
 
-  // Container::make('post_meta', 'page-zapravki', 'Характеристики заправок')
-  // ->show_on_template(array('page-zapravki.php'))
-  //     ->add_fields(array(   
-  //       Field::make('text', 'zap_addres', 'Адрес' )->set_width(50),
-  //       Field::make('image', 'zap_img', 'Обложка' )->set_width(50),
-  // ));
+  Container::make('post_meta', 'page-zapravki', 'Характеристики заправок')
+  ->show_on_template(array('page-zapravki.php'))
+      ->add_fields(array(   
+        Field::make('text', 'zap_addres_1', 'Адрес заправки 1' )->set_width(50),
+        Field::make('image', 'zap_img_1', 'Обложка заправки 1' )->set_width(50),
+        Field::make('text', 'zap_addres_2', 'Адрес заправки 2' )->set_width(50),
+        Field::make('image', 'zap_img_2', 'Обложка заправки 2' )->set_width(50),
+        Field::make('text', 'zap_addres_3', 'Адрес заправки 3' )->set_width(50),
+        Field::make('image', 'zap_img_3', 'Обложка заправки 3' )->set_width(50),
+        Field::make('text', 'zap_addres_4', 'Адрес заправки 4' )->set_width(50),
+        Field::make('image', 'zap_img_4', 'Обложка заправки 4' )->set_width(50),
+        Field::make('text', 'zap_addres_5', 'Адрес заправки 5' )->set_width(50),
+        Field::make('image', 'zap_img_5', 'Обложка заправки 5' )->set_width(50),
+        Field::make('text', 'zap_addres_6', 'Адрес заправки 6' )->set_width(50),
+        Field::make('image', 'zap_img_6', 'Обложка заправки 6' )->set_width(50),
+  ));
 
   Container::make('post_meta', 'page-zapravka', 'Характеристики заправки')
   ->show_on_template(array('page-zapravka.php'))

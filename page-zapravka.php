@@ -138,7 +138,9 @@ get_header(); ?>
 		</h2>
 		<div class="our-gas__title-line title-line"></div>
 
-		<div class="our-gas__wrap d-flex">
+		<?php the_content();?>
+
+		<!-- <div class="our-gas__wrap d-flex">
 
 			<div class="our-gas__inner d-flex">
 
@@ -156,7 +158,7 @@ get_header(); ?>
 				<a href="#" class="our-gas__card our-gas__card-big our-gas__card_05"></a>
 			</div>
 
-		</div>
+		</div> -->
 
 	</div>
 </section>
