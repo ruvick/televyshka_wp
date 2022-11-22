@@ -2670,3 +2670,15 @@ function scroll_animate(event) {
 	//If native scroll
 	//disableScroll();
 }
+
+function light_box_set() {
+	let elements = document.querySelectorAll('.wp-block-gallery a');
+	for (let elem of elements) {
+		elem.dataset.fslightbox = "gallery";
+	}
+	refreshFsLightbox();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+	light_box_set();
+});

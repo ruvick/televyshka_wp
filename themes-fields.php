@@ -87,8 +87,8 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
   Container::make('post_meta', 'page-zapravka', 'Характеристики заправки')
   ->show_on_template(array('page-zapravka.php'))
     ->add_fields(array(   
-      Field::make('text', 'zap_addres', 'Адрес')->set_width(50),
-      Field::make('image', 'zap_img', 'Обложка')->set_width(50),
+      // Field::make('text', 'zap_addres', 'Адрес')->set_width(50),
+      // Field::make('image', 'zap_img', 'Обложка')->set_width(50),
       Field::make('complex', 'complex_services', 'Услуги')
       ->add_fields(array(
         Field::make('text', 'znak_services', 'Значек')   

@@ -165,7 +165,7 @@ function my_assets()
 	// wp_enqueue_script('amodal', get_template_directory_uri() . '/js/jquery.arcticmodal-0.3.min.js', array(), $scrypt_version, true); //Модальные окна
 	// wp_enqueue_script('mask', get_template_directory_uri() . '/js/jquery.inputmask.bundle.js', array(), $scrypt_version, true); //маска для инпутов
 	// wp_enqueue_script('lightbox', get_template_directory_uri() . '/js/imageGallery/lightbox.min.js', array(), $scrypt_version, true); //Лайтбокс
-	// wp_enqueue_script('fslightbox', get_template_directory_uri() . '/js/imageGallery/fslightbox.js', array(), $scrypt_version, true); //Лайтбокс JS 
+	wp_enqueue_script('fslightbox', get_template_directory_uri() . '/js/imageGallery/fslightbox.js', array(), $scrypt_version, true); //Лайтбокс JS 
 	// wp_enqueue_script('fancybox', get_template_directory_uri() . '/js/imageGallery/jquery.fancybox.min.js', array(), $scrypt_version, true); //fancybox
 	// wp_enqueue_script('html2pdf', get_template_directory_uri() . '/js/html2pdf.bundle.js', array(), $scrypt_version, true); //Create PDF-page 
 	// wp_enqueue_script('scroll', get_template_directory_uri() . '/js/scroll.js', array(), $scrypt_version, true); //Scroll
@@ -175,26 +175,11 @@ function my_assets()
 
 	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array(), $scrypt_version, true); // Подключение основного скрипта в самом конце
 
-	// if ( is_page(17)) // Корзина
-	// {
-	// 	wp_enqueue_script( 'vue', get_template_directory_uri().'/js/shop/vue.js', array(), $scrypt_version, true);
-	// 	wp_enqueue_script( 'axios', get_template_directory_uri().'/js/shop/axios.min.js', array(), $scrypt_version, true);
-	// 	wp_enqueue_script( 'bascet', get_template_directory_uri().'/js/shop/bascet.js', array(), $scrypt_version, true); 
-	// }
-
-	// if ( is_page(219)) // Личный кабинет
-	// {
-	// 	wp_enqueue_script( 'vue', get_template_directory_uri().'/js/shop/vue.js', array(), $scrypt_version, true);
-	// 	wp_enqueue_script( 'axios', get_template_directory_uri().'/js/shop/axios.min.js', array(), $scrypt_version, true);
-	// 	wp_enqueue_script( 'cabinet', get_template_directory_uri().'/js/shop/cabinet.js', array(), $scrypt_version, true);
-	// }
-
 	wp_localize_script('main', 'allAjax', array(
 		'ajaxurl' => admin_url('admin-ajax.php'),
 		'nonce'   => wp_create_nonce('NEHERTUTLAZIT')
 	));
 }
-
 
 
 // Заготовка для вызова ajax
