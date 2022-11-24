@@ -4411,6 +4411,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   flex: 0 0 40px;
   height: 40px;
   background: #75818B;
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: center;
   border-radius: 50%;
 }
 

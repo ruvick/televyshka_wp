@@ -42,7 +42,7 @@ get_header(); ?>
 			?>
 			<div class="our-gas__card-descpBlock">
 				<div class="service-icon-block__icon-border">
-					<div class="service-icon-block__icon service-icon-block__icon_01"></div>
+					<div class="service-icon-block__icon" style="background-image: url(<?php echo wp_get_attachment_image_src($item['znak_services'], 'full')[0]; ?>);"></div>
 				</div>
 				<div class="our-gas__card-descpBlock-text"><? echo $item['text_services']; ?></div>
 			</div>

@@ -91,14 +91,14 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
       // Field::make('image', 'zap_img', 'Обложка')->set_width(50),
       Field::make('complex', 'complex_services', 'Услуги')
       ->add_fields(array(
-        Field::make('text', 'znak_services', 'Значек')   
+        Field::make('image', 'znak_services', 'Значек')   
         ->set_width(50),
         Field::make('text', 'text_services', 'Текст')   
         ->set_width(50),
       )),
       Field::make('complex', 'complex_fuel', 'Топливо')
       ->add_fields(array(
-        Field::make('text', 'znak_fuel', 'Значек')   
+        Field::make('image', 'znak_fuel', 'Значек')   
         ->set_width(50),
         Field::make('text', 'color_fuel', 'Цвет')   
         ->set_width(50),
