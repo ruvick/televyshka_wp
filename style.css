@@ -447,23 +447,23 @@ textarea.input {
 }
 
 ::-webkit-input-placeholder {
-  color: rgba(133, 132, 132, 0.4784313725);
+  color: #000;
 }
 
 ::-moz-placeholder {
-  color: rgba(133, 132, 132, 0.4784313725);
+  color: #000;
 }
 
 /* Firefox 19+ */
 
 :-moz-placeholder {
-  color: rgba(133, 132, 132, 0.4784313725);
+  color: #000;
 }
 
 /* Firefox 18- */
 
 :-ms-input-placeholder {
-  color: rgba(133, 132, 132, 0.4784313725);
+  color: #000;
 }
 
 input::-webkit-outer-spin-button,

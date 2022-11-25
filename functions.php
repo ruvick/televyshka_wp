@@ -324,5 +324,6 @@ function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime = '' ){
 
 
 
-// include "sender.php"
+include "sender.php"
 
+?>
