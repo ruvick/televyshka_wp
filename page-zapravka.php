@@ -52,41 +52,6 @@ get_header(); ?>
 	}
 	?>
 
-			<!-- <div class="our-gas__card-descpBlock">
-				<div class="service-icon-block__icon-border">
-					<div class="service-icon-block__icon service-icon-block__icon_01"></div>
-				</div>
-				<div class="our-gas__card-descpBlock-text">Заправка</div>
-			</div>
-
-			<div class="our-gas__card-descpBlock">
-				<div class="service-icon-block__icon-border">
-					<div class="service-icon-block__icon service-icon-block__icon_02"></div>
-				</div>
-				<div class="our-gas__card-descpBlock-text">Кофе с собой</div>
-			</div>
-
-			<div class="our-gas__card-descpBlock">
-				<div class="service-icon-block__icon-border">
-					<div class="service-icon-block__icon service-icon-block__icon_03"></div>
-				</div>
-				<div class="our-gas__card-descpBlock-text">Магазин</div>
-			</div>
-
-			<div class="our-gas__card-descpBlock">
-				<div class="service-icon-block__icon-border">
-					<div class="service-icon-block__icon service-icon-block__icon_04"></div>
-				</div>
-				<div class="our-gas__card-descpBlock-text">Шиномонтаж</div>
-			</div>
-
-			<div class="our-gas__card-descpBlock">
-				<div class="service-icon-block__icon-border">
-					<div class="service-icon-block__icon service-icon-block__icon_05"></div>
-				</div>
-				<div class="our-gas__card-descpBlock-text">Кофе с собой</div>
-			</div> -->
-
 		</div>
 
 		<h2 class="recurring__title">
@@ -102,7 +67,7 @@ get_header(); ?>
 			foreach ($zapFuel as $item) {
 			?>
 			<div class="our-gas__card-descpBlock">
-				<div class="our-gas__card-descpBlock-icon our-gas-icon-black"></div>
+				<div class="our-gas__card-descpBlock-icon" style="background-image: url(<?php echo wp_get_attachment_image_src($item['znak_fuel'], 'full')[0]; ?>);"></div>
 				<div class="our-gas__card-descpBlock-text"><? echo $item['text_fuel']; ?></div>
 			</div>
 			<?
@@ -110,26 +75,6 @@ get_header(); ?>
 		}
 	}
 	?>
-
-			<!-- <div class="our-gas__card-descpBlock">
-				<div class="our-gas__card-descpBlock-icon our-gas-icon-black"></div>
-				<div class="our-gas__card-descpBlock-text">Дт Евро</div>
-			</div>
-
-			<div class="our-gas__card-descpBlock">
-				<div class="our-gas__card-descpBlock-icon our-gas-icon-blue"></div>
-				<div class="our-gas__card-descpBlock-text">АИ 95 Евро</div>
-			</div>
-
-			<div class="our-gas__card-descpBlock">
-				<div class="our-gas__card-descpBlock-icon"></div>
-				<div class="our-gas__card-descpBlock-text">95</div>
-			</div>
-
-			<div class="our-gas__card-descpBlock">
-				<div class="our-gas__card-descpBlock-icon our-gas-icon-green"></div>
-				<div class="our-gas__card-descpBlock-text">92 Евро</div>
-			</div> -->
 
 		</div>
 
@@ -139,26 +84,6 @@ get_header(); ?>
 		<div class="our-gas__title-line title-line"></div>
 
 		<?php the_content();?>
-
-		<!-- <div class="our-gas__wrap d-flex">
-
-			<div class="our-gas__inner d-flex">
-
-				<a href="#" class="our-gas__card our-gas__card_01"></a>
-
-				<a href="#" class="our-gas__card our-gas__card_02"></a>
-
-				<a href="#" class="our-gas__card our-gas__card_03"></a>
-
-				<a href="#" class="our-gas__card our-gas__card_04"></a>
-
-			</div>
-
-			<div class="our-gas__inner our-gas__inner-big d-flex">
-				<a href="#" class="our-gas__card our-gas__card-big our-gas__card_05"></a>
-			</div>
-
-		</div> -->
 
 	</div>
 </section>
