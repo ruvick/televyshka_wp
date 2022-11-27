@@ -1,11 +1,10 @@
 <div class="our-gas__wrap d-flex">
 
 <div class="our-gas__inner d-flex"> 
-
-  <a href="<?php echo get_permalink(24);?>" class="our-gas__card" style="background-image: url(<?php echo wp_get_attachment_image_src(carbon_get_the_post_meta("zap_img_1"), 'full')[0];?>);">
+  <a href="<?php echo get_permalink(24);?>" class="our-gas__card" style="background-image: url(<?php echo wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_1"), 'full')[0];?>);">
     <div class="our-gas__card-descpBlock">
       <div class="our-gas__card-descpBlock-icon our-gas__card-descpBlock-icon-azs"></div>
-      <div class="our-gas__card-descpBlock-text"><? echo carbon_get_post_meta(get_the_ID(24), 'zap_addres_1'); ?></div> 
+      <div class="our-gas__card-descpBlock-text"><? echo carbon_get_post_meta(21, 'zap_addres_1'); ?></div> 
     </div>
   </a>
 
