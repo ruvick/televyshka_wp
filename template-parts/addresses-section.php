@@ -1,3 +1,55 @@
+<?
+	$all_azs = [
+		[
+			"adress" => "50 лет октября 124б",
+			"geo" => [51.75950488148242,36.1264498220901],
+			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_1"), 'full')[0],
+			"services" => ["Магазин", "Туалет", "Бесплатный WiFi"],
+			"toplivo" => ["АИ-92", "АИ-95", "ДТ"]
+		],
+
+		[
+			"adress" => "с. Беседино",
+			"geo" => [51.70449733129399,36.491601158874495],
+			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_2"), 'full')[0],
+			"services" => ["Магазин", "Туалет", "Бесплатный WiFi"],
+			"toplivo" => ["АИ-92", "АИ-95", "ДТ"]
+		],
+
+		[
+			"adress" => "Курск обл, д.Катырина д.74",
+			"geo" => [51.657612542767154,35.78915970301054],
+			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_3"), 'full')[0],
+			"services" => ["Магазин", "Туалет", "Бесплатный WiFi"],
+			"toplivo" => ["АИ-92", "АИ-95", "ДТ"]
+		],
+
+		[
+			"adress" => "ул.Аропортовская д25",
+			"geo" => [51.747753545949095,36.28037236441801],
+			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_4"), 'full')[0],
+			"services" => ["Магазин", "Туалет", "Бесплатный WiFi"],
+			"toplivo" => ["АИ-92", "АИ-95", "ДТ"]
+		],
+
+		[
+			"adress" => "Белгородская область, Яковлевский район, 633км",
+			"geo" => [50.874896513262314,36.411121499999915],
+			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_5"), 'full')[0],
+			"services" => ["Магазин", "Туалет", "Бесплатный WiFi"],
+			"toplivo" => ["АИ-92", "АИ-95", "ДТ"]
+		],
+
+		[
+			"adress" => "д. Курица",
+			"geo" => [51.895887055330455,36.03093938084305],
+			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_6"), 'full')[0],
+			"services" => ["Магазин", "Туалет", "Бесплатный WiFi"],
+			"toplivo" => ["АИ-92", "АИ-95", "ДТ"]
+		],
+
+	];
+?>
 <section id="addresses" class="addresses section">
 	<div class="_container">
 
@@ -6,83 +58,32 @@
 			<div class="addresses__column addresses__column_left">
 				<div class="addresses__block">
 
-					<div class="addresses__block-item">
-						<h5 class="addresses__block-item-title">Курск, 50лет октября 124б</h5>
-						<!-- <p class="addresses__block-item-subtitle"></p> -->
-						<ul class="addresses__block-item-list">
-							<li class="addresses__block-item-list-item">Сервис:</li>
-							<li class="addresses__block-item-list-item">Кофе Магазин Туалет</li>
-							<li class="addresses__block-item-list-item">Бесплатный WiFi</li>
-							<li class="addresses__block-item-list-item">Мойка самообслуживания
-							</li>
-							<li class="addresses__block-item-list-item">Парковка</li>
-						</ul>
-					</div>
+				<?
+					foreach($all_azs as $element) {
+						$services = "";
 
-					<div class="addresses__block-item">
-						<h5 class="addresses__block-item-title">Курск обл, с.Беседино</h5> 
-						<!-- <p class="addresses__block-item-subtitle"></p> -->
-						<ul class="addresses__block-item-list">
-							<li class="addresses__block-item-list-item">Сервис:</li>
-							<li class="addresses__block-item-list-item">Кофе Магазин Туалет</li>
-							<li class="addresses__block-item-list-item">Бесплатный WiFi</li>
-							<li class="addresses__block-item-list-item">Мойка самообслуживания
-							</li>
-							<li class="addresses__block-item-list-item">Парковка</li>
-						</ul>
-					</div>
+						for ($i = 0; $i < count($element["services"]);  $i++)
+						{
+							$services .= "<span class='all_azs_element service_sp' data-services='".$element["services"][$i]."'>".$element["services"][$i]."</span>";
+						}
+						  
+						$toplivo = "";
 
-					<div class="addresses__block-item">
-						<h5 class="addresses__block-item-title">Курск обл, д.Катырина д.74</h5>
-						<!-- <p class="addresses__block-item-subtitle"></p> -->
-						<ul class="addresses__block-item-list">
-							<li class="addresses__block-item-list-item">Сервис:</li>
-							<li class="addresses__block-item-list-item">Кофе Магазин Туалет</li>
-							<li class="addresses__block-item-list-item">Бесплатный WiFi</li>
-							<li class="addresses__block-item-list-item">Мойка самообслуживания
-							</li>
-							<li class="addresses__block-item-list-item">Парковка</li>
-						</ul>
+						for ($i = 0; $i < count($element["toplivo"]);  $i++)
+						{
+							$toplivo .= "<span class='all_azs_element toplivo_sp' data-toplivo='".$element["toplivo"][$i]."'>".$element["toplivo"][$i]."</span>";
+						}
+				?>
+					<div class="addresses__block-item" data-koordinat="<?echo $element["geo"]; ?>">
+						<h5 class="addresses__block-item-title"><?echo $element["adress"]; ?></h5>
+						<? echo $services;?>
+						<br/>
+						<? echo $toplivo;?>
 					</div>
+				<?		
+					}
+				?>
 
-					<div class="addresses__block-item">
-						<h5 class="addresses__block-item-title">Курск, ул.Аропортовская д25</h5>
-						<!-- <p class="addresses__block-item-subtitle"></p> -->
-						<ul class="addresses__block-item-list">
-							<li class="addresses__block-item-list-item">Сервис:</li>
-							<li class="addresses__block-item-list-item">Кофе Магазин Туалет</li>
-							<li class="addresses__block-item-list-item">Бесплатный WiFi</li>
-							<li class="addresses__block-item-list-item">Мойка самообслуживания
-							</li>
-							<li class="addresses__block-item-list-item">Парковка</li>
-						</ul>
-					</div>
-
-					<div class="addresses__block-item">
-						<h5 class="addresses__block-item-title">Белгородская обл., Яковлевский рн., 633км трасса Москва-Харьков</h5>
-						<!-- <p class="addresses__block-item-subtitle"></p> -->
-						<ul class="addresses__block-item-list">
-							<li class="addresses__block-item-list-item">Сервис:</li>
-							<li class="addresses__block-item-list-item">Кофе Магазин Туалет</li>
-							<li class="addresses__block-item-list-item">Бесплатный WiFi</li>
-							<li class="addresses__block-item-list-item">Мойка самообслуживания
-							</li>
-							<li class="addresses__block-item-list-item">Парковка</li>
-						</ul>
-					</div>
-
-          <div class="addresses__block-item">
-						<h5 class="addresses__block-item-title">Курск обл, д.Курица</h5>
-						<!-- <p class="addresses__block-item-subtitle"></p> -->
-						<ul class="addresses__block-item-list">
-							<li class="addresses__block-item-list-item">Сервис:</li>
-							<li class="addresses__block-item-list-item">Кофе Магазин Туалет</li>
-							<li class="addresses__block-item-list-item">Бесплатный WiFi</li>
-							<li class="addresses__block-item-list-item">Мойка самообслуживания
-							</li>
-							<li class="addresses__block-item-list-item">Парковка</li>
-						</ul>
-					</div>
 
 				</div>
 			</div>
@@ -92,45 +93,149 @@
 				<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script> 
 
 <script>
+
+let myMap;
+let selectedElement = undefined;
+
+function selectElement(element) {
+  if (selectedElement !== undefined)
+      selectedElement.classList.remove("active")
+  element.classList.add("active")
+  selectedElement = element
+}
+
+function generateBoolonContent (element) {
+          
+		let services = "";
+
+        for (let i = 0; i < element.services.length;  i++)
+        {
+            services += element.services[i]
+			if (i != element.services.length-1 ) services += ", "
+        }
+          
+		let toplivo = "";
+
+        for (let i = 0; i < element.toplivo.length;  i++)
+        {
+            toplivo += element.toplivo[i]
+			if (i != element.toplivo.length-1 ) toplivo += ", "
+        }
+
+		let be = "<div class = 'blWriper'>"
+            be += "<div class = 'infoBlk'>"
+                
+                be += "<div class = 'img'>"
+                    be += "<img src = '"+element.img+"' >"
+                be += "</div>"
+
+                be += "<div class = 'inform'>"
+                    be += "<h2>"+element.adress+"</h2>"
+                    be += "<strong>Топливл: </strong> "+toplivo+"<br/>"
+                    be += "<strong>Услуги: </strong> "+services+"<br/>"
+                be += "</div>"
+
+            be += "</div>"
+
+            
+            be += "</div>"
+          be += "</div>"
+          return be;
+}
+
 	ymaps.ready(init); 
 
 	function init () {
-		var myMap = new ymaps.Map("map", {
+		 let all_azs = <? echo json_encode($all_azs);?>;
+		console.log(all_azs)
+
+		myMap = new ymaps.Map("map", {
 		// Координаты центра карты
-		center:[<?php echo carbon_get_theme_option('map_point') ?>],
+		center:[51.44547824674944,36.53584421919245],
 		// Масштаб карты
-		zoom: 17,
+		zoom: 9,
 		// Выключаем все управление картой
 		controls: []
 	}); 
 
-		var myGeoObjects = [];
+	var myGeoObjects = [];
 
-// Указываем координаты метки
-	myGeoObjects = new ymaps.Placemark([<?php echo carbon_get_theme_option('map_point') ?>],{
-	// hintContent: '<div class="map-hint">Авто профи, Курск, ул.Комарова, 16</div>',
-	balloonContent: '<div class="map-hint"><?php echo carbon_get_theme_option('text_map') ?>', },{
-	iconLayout: 'default#image',
-	// Путь до нашей картинки
-	iconImageHref:  '<?php bloginfo("template_url"); ?>/img/icons/map-azs.svg',  
-	// Размеры иконки
-	iconImageSize: [50, 75],
-	// Смещение верхнего угла относительно основания иконки
-	iconImageOffset: [-25, -100]
-});
+	for (let i =0; i<all_azs.length; i++) {
+            let coord = all_azs[i].geo
+
+            myPlacemark = new ymaps.Placemark(coord, {
+                balloonContent: generateBoolonContent(all_azs[i]),
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: '<?php bloginfo("template_url"); ?>/img/icons/map-azs.svg',
+                iconImageSize: [25, 38],
+				iconImageOffset: [-12, -38]
+            });
+
+
+            myPlacemark.events.add('click' , function(e){
+											
+				// var code = e.get("target").properties.get("Code");
+                // let element = document.getElementById(code)
+                // selectElement(element)
+                // element.scrollIntoView({block: "center", behavior: "smooth"})
+			
+											
+			});
+
+            myGeoObjects[i] = myPlacemark 
+
+        }
+		
 
 var clusterer = new ymaps.Clusterer({
-	clusterDisableClickZoom: false,
+	clusterDisableClickZoom: true,
 	clusterOpenBalloonOnClick: false,
+	clusterIconColor:"#d9000d",
 });
 
 clusterer.add(myGeoObjects);
 myMap.geoObjects.add(clusterer);
 // Отключим zoom
-myMap.behaviors.disable('scrollZoom');
+// myMap.behaviors.disable('scrollZoom');
+
 
 }
+
+document.addEventListener("DOMContentLoaded", () => { 
+
+  const blkBtn = document.querySelectorAll(".addresses__block-item")
+  
+  blkBtn.forEach(element => { 
+      element.onclick = (e) => { 
+
+          selectElement(element)
+          let coord = element.dataset.koordinat.split(",")
+          myMap.setCenter(coord)
+          myMap.setZoom(17)  
+          myMap.geoObjects.each(function (geoObject) {
+              let go = geoObject.getGeoObjects() 
+              
+              for (let i =0; i< go.length; i++)
+              {
+                  if (go[i].properties.get('Code') == element.dataset.code) {
+                      
+                      if (!go[i].balloon.isOpen())
+                          go[i].balloon.open();
+                  
+                      break;
+                  }
+              }
+          }); 
+          
+           
+      }
+      
+  });
+});
+
 </script>
+
 			</div>
 
 		</div>

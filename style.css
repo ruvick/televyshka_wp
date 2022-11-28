@@ -4285,14 +4285,27 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .addresses__block {
   height: 100%;
-  padding: 20px 15px 20px 48px;
+  padding: 20px 15px 20px 20px;
   background: #F4F4F4;
   border-radius: 30px 0 0 30px;
   overflow: auto;
 }
 
+.addresses__block-item-title {
+  font-size: 20px;
+}
+
 .addresses__block-item {
-  margin-bottom: 37px;
+  margin-bottom: 10px;
+  padding: 20px;
+  border:1px solid #F4F4F4;
+  border-radius: 11px;
+  cursor: pointer;
+}
+.addresses__block-item.active,
+.addresses__block-item:hover {
+  border:1px solid gray;
+  background-color: lightgray;
 }
 
 .addresses__block-item:last-child {
@@ -4580,6 +4593,88 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .bascet_form .form-line {
   margin-bottom: 20px;
+}
+
+/*----Разметка балуна----*/
+
+.blWriper {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.blWriper .infoBlk{ 
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blWriper .infoBlk .img{  
+  flex: 1;
+  margin-right: 10px;
+}
+
+.blWriper .infoBlk .img img{  
+  width:100%;
+  height: auto;
+}
+
+.blWriper .infoBlk .inform{  
+  flex: 2;
+}
+
+.blWriper .infoBlk .inform h2{   
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.blWriper .selectorBlk{ 
+  width:100%;
+  min-height: 32px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blWriper .selectorBlk .side_lnk {
+  background-color: #DD290A;
+  color: white;
+  margin: 3px 10px 3px 0;
+  padding: 3px 10px;
+  text-align: center;
+}
+
+/*----Разметка балуна END----*/
+
+.all_azs_element {
+  background-color: #75818B;
+  border-radius: 20px;
+  padding: 0 15px;
+  color: white;
+  margin: 0 5px 10px 0;
+  display: inline-block;
+  font-size: 12px;
+}
+
+span[data-toplivo*="ДТ"] 
+{
+  background-color: #161615;
+}
+
+span[data-toplivo*="92"] 
+{
+  background-color: #d9000d;
+}
+
+span[data-toplivo*="95"] 
+{
+  background-color: #165425;
+}
+
+span[data-toplivo*="ГАЗ"], 
+span[data-toplivo*="Газ"] 
+{
+  background-color: #0070bf;
 }
 
 @media (max-width: 600px) {
