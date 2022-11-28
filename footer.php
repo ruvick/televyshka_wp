@@ -11,7 +11,7 @@
 			<div class="footer__contacts">
 				<div class="footer__contacts-phone contacts-phone-block">
 					<? $tel = carbon_get_theme_option("as_phones_1"); 
-						if (!empty($tel)){?><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="footer__telephone contacts-phone-block__telephone"><? echo $tel; ?></a><?}?> 
+						if (!empty($tel)){?><a href="tel:+<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="footer__telephone contacts-phone-block__telephone"><? echo $tel; ?></a><?}?> 
 					<a href="#callback" class="footer__popup-link header__popup-link _popup-link">Заказать звонок</a>
 				</div>
 

@@ -113,11 +113,11 @@ table td {
   margin: 0;
 }
 
-/*
-&::-webkit-scrollbar {
+
+::-webkit-scrollbar {
 	display: none;
 }
-*/
+
 
 body {
   font-weight: 400;
@@ -3699,7 +3699,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .contacts-phone-block__telephone {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
 }
 
@@ -4672,6 +4672,8 @@ span[data-toplivo*="95"]
   background-color: #165425;
 }
 
+span[data-toplivo*="СУГ"], 
+span[data-toplivo*="ДГК"], 
 span[data-toplivo*="ГАЗ"], 
 span[data-toplivo*="Газ"] 
 {
@@ -5151,7 +5153,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   }
 
   .header__phone {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .header__time-phone {
@@ -5177,9 +5179,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     margin-bottom: 15px;
   }
 
-  ::-webkit-scrollbar {
+  /* ::-webkit-scrollbar {
     display: none;
-  }
+  } */
 
   .header__contacts-phone {
     padding-top: 0;
@@ -5289,6 +5291,10 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .addresses__block {
     border-radius: 0;
+    max-height: 220px;
+    overflow: auto;
+    width: auto;
+    flex-wrap: nowrap;
   }
 
   .addresses__map {
@@ -5466,11 +5472,16 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   .addresses__block-item {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 100%;
-    flex: 0 1 100%;
+    flex: none;
+    max-width: 250px;
+    border: 1px solid gray;
+    height: auto;
+    min-height: 170px;
+    margin-right: 20px;
   }
 
   .addresses__map {
-    height: 200px;
+    height: 400px;
   }
 
   .our-gas__card {

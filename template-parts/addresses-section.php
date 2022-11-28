@@ -4,48 +4,48 @@
 			"adress" => "50 лет октября 124б",
 			"geo" => [51.75950488148242,36.1264498220901],
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_1"), 'full')[0],
-			"services" => ["Магазин", "Туалет", "Бесплатный WiFi"],
-			"toplivo" => ["АИ-92", "АИ-95", "ДТ"]
+			"services" => explode(',', carbon_get_post_meta(21, "zap_services_1")),
+			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_1"))
 		],
 
 		[
 			"adress" => "с. Беседино",
 			"geo" => [51.70449733129399,36.491601158874495],
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_2"), 'full')[0],
-			"services" => ["Магазин", "Туалет", "Бесплатный WiFi"],
-			"toplivo" => ["АИ-92", "АИ-95", "ДТ"]
+			"services" => explode(',', carbon_get_post_meta(21, "zap_services_2")),
+			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_2"))
 		],
 
 		[
 			"adress" => "Курск обл, д.Катырина д.74",
 			"geo" => [51.657612542767154,35.78915970301054],
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_3"), 'full')[0],
-			"services" => ["Магазин", "Туалет", "Бесплатный WiFi"],
-			"toplivo" => ["АИ-92", "АИ-95", "ДТ"]
+			"services" => explode(',', carbon_get_post_meta(21, "zap_services_3")),
+			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_3"))
 		],
 
 		[
 			"adress" => "ул.Аропортовская д25",
 			"geo" => [51.747753545949095,36.28037236441801],
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_4"), 'full')[0],
-			"services" => ["Магазин", "Туалет", "Бесплатный WiFi"],
-			"toplivo" => ["АИ-92", "АИ-95", "ДТ"]
+			"services" => explode(',', carbon_get_post_meta(21, "zap_services_4")),
+			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_4"))
 		],
 
 		[
 			"adress" => "Белгородская область, Яковлевский район, 633км",
 			"geo" => [50.874896513262314,36.411121499999915],
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_5"), 'full')[0],
-			"services" => ["Магазин", "Туалет", "Бесплатный WiFi"],
-			"toplivo" => ["АИ-92", "АИ-95", "ДТ"]
+			"services" => explode(',', carbon_get_post_meta(21, "zap_services_5")),
+			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_5"))
 		],
 
 		[
 			"adress" => "д. Курица",
 			"geo" => [51.895887055330455,36.03093938084305],
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_6"), 'full')[0],
-			"services" => ["Магазин", "Туалет", "Бесплатный WiFi"],
-			"toplivo" => ["АИ-92", "АИ-95", "ДТ"]
+			"services" => explode(',', carbon_get_post_meta(21, "zap_services_6")),
+			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_6"))
 		],
 
 	];
@@ -153,7 +153,7 @@ function generateBoolonContent (element) {
 		// Координаты центра карты
 		center:[51.44547824674944,36.53584421919245],
 		// Масштаб карты
-		zoom: 9,
+		zoom: 7,
 		// Выключаем все управление картой
 		controls: []
 	}); 

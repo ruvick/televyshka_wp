@@ -38,7 +38,7 @@ get_header(); ?>
 		<? $bik = carbon_get_theme_option("as_bik"); if (!empty($bik)){?><li>БИК: <strong><? echo $bik; ?></strong></li><?}?>
 		<? $bank = carbon_get_theme_option("as_bank"); if (!empty($bank)){?><li>БАНК: <strong><? echo $bank; ?></strong></li><?}?>
 		<? $mail = carbon_get_theme_option("as_email"); if (!empty($mail)){?><li>Email: <strong><a href="mailto:<? echo $mail; ?>"><? echo $mail; ?></strong></a></li><?}?>
-		<? $tel = carbon_get_theme_option("as_phones_1"); $tel2 = carbon_get_theme_option("as_phone_2"); if (!empty($tel)){?><li class="contacts-list__item-phone">По всем интересующим вопросам обращайтесь по телефону: <strong><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>"><? echo $tel; ?></strong></a> <a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel2); ?>"><? echo $tel2; ?></strong></a></li><?}?> 
+		<? $tel = carbon_get_theme_option("as_phones_1"); $tel2 = carbon_get_theme_option("as_phone_2"); if (!empty($tel)){?><li class="contacts-list__item-phone">По всем интересующим вопросам обращайтесь по телефону: <br/> <br/><strong><a href="tel:+<? echo preg_replace('/[^0-9]/', '', $tel); ?>"><? echo $tel; ?></strong></a> <a href="tel:+<? echo preg_replace('/[^0-9]/', '', $tel2); ?>"><? echo $tel2; ?></strong></a></li><?}?> 
 	</ul>
 
 	<?php get_template_part('template-parts/addresses-section');?>
