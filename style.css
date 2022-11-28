@@ -5409,7 +5409,16 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   }
 
   .about__imageBlock-nuar_blk {
-    background-color: rgba(0, 0, 0, 0.1254901961);
+    background-color: rgba(0, 0, 0, 0.0);
+  }
+
+  .about__imageBlock-phone {
+    display: block;
+    width: 195px;
+    height: 340px;
+    right: 0;
+    left: unset;
+    top: -100px;
   }
 }
 
@@ -5526,10 +5535,10 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   .about__imageBlock-btn {
     width: 100%;
   }
-
+/* 
   .about__imageBlock-subtitle br {
     display: none;
-  }
+  } */
 }
 
 @media (max-width: 345px) {
@@ -5578,9 +5587,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   background-image: url(img/main-banner.webp);
 }
 
-._webp .about__imageBlock {
+/* ._webp .about__imageBlock {
   background-image: url(img/about.webp);
-}
+} */
 
 ._webp .our-gas__card_01 {
   background-image: url(img/card/01.webp);
