@@ -5287,14 +5287,28 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .addresses__column_left {
     margin-right: 0;
+    overflow: auto;
+    width: auto;
+    flex-wrap: nowrap;
   }
 
   .addresses__block {
     border-radius: 0;
-    max-height: 220px;
-    overflow: auto;
+    max-height: 260px;
     width: auto;
     flex-wrap: nowrap;
+  }
+
+  .addresses__block-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: none;
+    max-width: 250px;
+    border: 1px solid gray;
+    height: auto;
+    min-height: 220px;
+    margin-right: 20px;
+    margin-bottom: 0;
   }
 
   .addresses__map {
@@ -5449,6 +5463,17 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     font-weight: 700;
     padding: 5px 25px;
     margin-left: -18px;
+    border-radius: 30px;
+  }
+
+  .our-gas__card-descpBlock {
+    flex-direction: column;
+    width:100%;
+  }
+
+  .our-gas__card-descpBlock-icon {
+    margin-left: 0;
+    margin-right: auto;
   }
 }
 
@@ -5476,8 +5501,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     max-width: 250px;
     border: 1px solid gray;
     height: auto;
-    min-height: 170px;
+    min-height: 220px;
     margin-right: 20px;
+    margin-bottom: 0;
   }
 
   .addresses__map {
