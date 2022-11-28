@@ -4362,6 +4362,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   max-width: 252px;
   width: 100%;
   margin-right: 46px;
+  margin-bottom: 20px;
 }
 
 .gas-icon-block .our-gas__card-descpBlock:last-child {

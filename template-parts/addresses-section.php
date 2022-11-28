@@ -74,7 +74,7 @@
 							$toplivo .= "<span class='all_azs_element toplivo_sp' data-toplivo='".$element["toplivo"][$i]."'>".$element["toplivo"][$i]."</span>";
 						}
 				?>
-					<div class="addresses__block-item" data-koordinat="<?echo $element["geo"]; ?>">
+					<div  class="addresses__block-item" data-adress="<?echo $element["adress"] ?>" data-koordinat="<?echo $element["geo"][0].", ".$element["geo"][1]; ?>">
 						<h5 class="addresses__block-item-title"><?echo $element["adress"]; ?></h5>
 						<? echo $services;?>
 						<br/>
@@ -165,6 +165,7 @@ function generateBoolonContent (element) {
 
             myPlacemark = new ymaps.Placemark(coord, {
                 balloonContent: generateBoolonContent(all_azs[i]),
+				adress: all_azs[i].adress
             }, {
                 iconLayout: 'default#image',
                 iconImageHref: '<?php bloginfo("template_url"); ?>/img/icons/map-azs.svg',
@@ -175,10 +176,11 @@ function generateBoolonContent (element) {
 
             myPlacemark.events.add('click' , function(e){
 											
-				// var code = e.get("target").properties.get("Code");
-                // let element = document.getElementById(code)
-                // selectElement(element)
-                // element.scrollIntoView({block: "center", behavior: "smooth"})
+				var adr = e.get("target").properties.get("adress");
+				console.log(adr);
+                let element = document.querySelector(".addresses__block-item[data-adress='"+adr+"']")
+                selectElement(element)
+                element.scrollIntoView({block: "center", behavior: "smooth"})
 			
 											
 			});
@@ -208,7 +210,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
   blkBtn.forEach(element => { 
       element.onclick = (e) => { 
-
           selectElement(element)
           let coord = element.dataset.koordinat.split(",")
           myMap.setCenter(coord)
@@ -218,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
               
               for (let i =0; i< go.length; i++)
               {
-                  if (go[i].properties.get('Code') == element.dataset.code) {
+                  if (go[i].properties.get('adress') == element.dataset.adress) {
                       
                       if (!go[i].balloon.isOpen())
                           go[i].balloon.open();

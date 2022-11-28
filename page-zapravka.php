@@ -78,13 +78,17 @@ get_header(); ?>
 
 		</div>
 
-		<h2 class="our-gas__title">
-			Фото заправки
-		</h2>
-		<div class="our-gas__title-line title-line"></div>
+		<?
+			$contetnt = get_the_content();
+			if (!empty($contetnt)) {
+		?>
+			<h2 class="our-gas__title">
+				Фото заправки
+			</h2>
+			<div class="our-gas__title-line title-line"></div>
 
-		<?php the_content();?>
-
+			<?php the_content(); ?>
+		<?}?>
 	</div>
 </section>
 
