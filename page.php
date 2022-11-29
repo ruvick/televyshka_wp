@@ -35,7 +35,10 @@ get_header(); ?>
 		}
 	?> 
 
-	<?php the_content();?>
+	<div class="text_out">
+		<?php the_content();?>
+	</div>
+	
 
 	</div>
 </section>

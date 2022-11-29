@@ -54,6 +54,8 @@ get_header(); ?>
 
 		</div>
 
+
+
 		<h2 class="recurring__title">
 			Топливо
 		</h2>
@@ -76,6 +78,10 @@ get_header(); ?>
 	}
 	?>
 
+		</div>
+
+		<div class="price_table">
+			<? echo carbon_get_post_meta(get_the_ID(), "zap_price"); ?>
 		</div>
 
 		<?

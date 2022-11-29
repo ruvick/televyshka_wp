@@ -4680,6 +4680,54 @@ span[data-toplivo*="Газ"]
   background-color: #0070bf;
 }
 
+.text_out {
+  width:100%;
+}
+
+.text_out p{ 
+  margin: 1em 0;
+}
+
+.text_out img{ 
+  width:unset;
+  height:unset;
+  margin: 1em 0;
+}
+
+.price_table {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.price_table table { 
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  border-spacing: 0;
+  min-width: 320px;
+}
+
+
+.price_table table tr:nth-child(2n-1) td { 
+  background-color: #ebebeb;
+}
+
+.price_table table tr:first-child td { 
+  background-color: lightgray;
+}
+
+
+.price_table table td{ 
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+}
+
+.price_table table td,
+.price_table table th
+{ 
+  min-width: 150px;
+  padding: 3px 10px;
+}
+
 @media (max-width: 600px) {
   .bascet_page_table .name {
     padding-left: 10px;
