@@ -115,7 +115,7 @@ table td {
 
 
 ::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 
@@ -4298,13 +4298,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .addresses__block-item {
   margin-bottom: 10px;
   padding: 20px;
-  border:1px solid #F4F4F4;
+  border: 1px solid #F4F4F4;
   border-radius: 11px;
   cursor: pointer;
 }
+
 .addresses__block-item.active,
 .addresses__block-item:hover {
-  border:1px solid gray;
+  border: 1px solid gray;
   background-color: lightgray;
 }
 
@@ -4599,38 +4600,38 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 /*----Разметка балуна----*/
 
 .blWriper {
-  width:100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.blWriper .infoBlk{ 
+.blWriper .infoBlk {
   min-height: 100px;
   display: flex;
   justify-content: space-between;
 }
 
-.blWriper .infoBlk .img{  
+.blWriper .infoBlk .img {
   flex: 1;
   margin-right: 10px;
 }
 
-.blWriper .infoBlk .img img{  
-  width:100%;
+.blWriper .infoBlk .img img {
+  width: 100%;
   height: auto;
 }
 
-.blWriper .infoBlk .inform{  
+.blWriper .infoBlk .inform {
   flex: 2;
 }
 
-.blWriper .infoBlk .inform h2{   
+.blWriper .infoBlk .inform h2 {
   margin-bottom: 10px;
   font-size: 18px;
 }
 
-.blWriper .selectorBlk{ 
-  width:100%;
+.blWriper .selectorBlk {
+  width: 100%;
   min-height: 32px;
   margin-top: 10px;
   display: flex;
@@ -4657,26 +4658,22 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-size: 12px;
 }
 
-span[data-toplivo*="ДТ"] 
-{
+span[data-toplivo*="ДТ"] {
   background-color: #161615;
 }
 
-span[data-toplivo*="92"] 
-{
+span[data-toplivo*="92"] {
   background-color: #d9000d;
 }
 
-span[data-toplivo*="95"] 
-{
+span[data-toplivo*="95"] {
   background-color: #165425;
 }
 
-span[data-toplivo*="СУГ"], 
-span[data-toplivo*="ДГК"], 
-span[data-toplivo*="ГАЗ"], 
-span[data-toplivo*="Газ"] 
-{
+span[data-toplivo*="СУГ"],
+span[data-toplivo*="ДГК"],
+span[data-toplivo*="ГАЗ"],
+span[data-toplivo*="Газ"] {
   background-color: #0070bf;
 }
 
@@ -5477,12 +5474,26 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .our-gas__card-descpBlock {
     flex-direction: column;
-    width:100%;
+    width: 100%;
   }
 
   .our-gas__card-descpBlock-icon {
     margin-left: 0;
     margin-right: auto;
+    background-size: 65%;
+  }
+
+  .our-gas__card-descpBlock-text {
+    padding: 10px 25px;
+  }
+
+  .service-icon-block .our-gas__card-descpBlock {
+    flex-direction: row;
+  }
+
+  .service-icon-block .our-gas__card-descpBlock-text {
+    padding: 12px 25px 12px 35px;
+    margin-left: -15px;
   }
 }
 
@@ -5535,10 +5546,15 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   .about__imageBlock-btn {
     width: 100%;
   }
-/* 
+
+  /* 
   .about__imageBlock-subtitle br {
     display: none;
   } */
+  .gas-icon-block .our-gas__card-descpBlock {
+    max-width: 100%;
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 345px) {
@@ -5548,8 +5564,8 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .header__contacts {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 125px;
-    flex: 0 0 125px;
+    -ms-flex: 0 0 135px;
+    flex: 0 0 135px;
     margin-right: 10px;
   }
 
