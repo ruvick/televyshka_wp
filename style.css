@@ -4083,6 +4083,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background-size: cover;
 }
 
+.about__imageBlock {
+  background-image: url("img/about.jpg");
+}
+
 .about__imageBlock-nuar_blk {
   display: none;
 }
@@ -4678,16 +4682,16 @@ span[data-toplivo*="Газ"] {
 }
 
 .text_out {
-  width:100%;
+  width: 100%;
 }
 
-.text_out p{ 
+.text_out p {
   margin: 1em 0;
 }
 
-.text_out img{ 
-  width:unset;
-  height:unset;
+.text_out img {
+  width: unset;
+  height: unset;
   margin: 1em 0;
 }
 
@@ -4696,7 +4700,7 @@ span[data-toplivo*="Газ"] {
   margin-bottom: 60px;
 }
 
-.price_table table { 
+.price_table table {
   border-top: 1px solid gray;
   border-right: 1px solid gray;
   border-spacing: 0;
@@ -4704,23 +4708,22 @@ span[data-toplivo*="Газ"] {
 }
 
 
-.price_table table tr:nth-child(2n-1) td { 
+.price_table table tr:nth-child(2n-1) td {
   background-color: #ebebeb;
 }
 
-.price_table table tr:first-child td { 
+.price_table table tr:first-child td {
   background-color: lightgray;
 }
 
 
-.price_table table td{ 
+.price_table table td {
   border-bottom: 1px solid gray;
   border-left: 1px solid gray;
 }
 
 .price_table table td,
-.price_table table th
-{ 
+.price_table table th {
   min-width: 150px;
   padding: 3px 10px;
 }
@@ -5389,6 +5392,10 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .title-line {
     margin: 10px 0 18px 0;
+  }
+
+  .banner {
+    min-height: 150px;
   }
 }
 
