@@ -5605,7 +5605,18 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   }
 }
 
-@media (max-width: 345px) {
+@media (max-width: 375px) {
+
+  .about__imageBlock {
+    margin-top: 50px;
+  }
+
+  .about__imageBlock-phone {
+    width: 180px;
+    height: 295px;
+  }
+
+
   .header__phone {
     font-size: 16px;
   }
@@ -5620,6 +5631,13 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   .our-gas__card-descpBlock-text {
     font-size: 12px;
     padding: 5px 15px;
+  }
+}
+
+@media (max-width: 340px) {
+  .about__imageBlock-phone {
+    width: 135px;
+    height: 240px;
   }
 }
 
