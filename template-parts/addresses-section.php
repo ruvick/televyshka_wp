@@ -5,7 +5,8 @@
 			"geo" => [51.75950488148242,36.1264498220901],
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_1"), 'full')[0],
 			"services" => explode(',', carbon_get_post_meta(21, "zap_services_1")),
-			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_1"))
+			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_1")),
+			"lnk" => get_permalink(24)
 		],
 
 		[
@@ -13,7 +14,8 @@
 			"geo" => [51.70449733129399,36.491601158874495],
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_2"), 'full')[0],
 			"services" => explode(',', carbon_get_post_meta(21, "zap_services_2")),
-			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_2"))
+			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_2")),
+			"lnk" => get_permalink(26)
 		],
 
 		[
@@ -21,7 +23,8 @@
 			"geo" => [51.657612542767154,35.78915970301054],
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_3"), 'full')[0],
 			"services" => explode(',', carbon_get_post_meta(21, "zap_services_3")),
-			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_3"))
+			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_3")),
+			"lnk" => get_permalink(28)
 		],
 
 		[
@@ -29,7 +32,8 @@
 			"geo" => [51.747753545949095,36.28037236441801],
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_4"), 'full')[0],
 			"services" => explode(',', carbon_get_post_meta(21, "zap_services_4")),
-			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_4"))
+			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_4")),
+			"lnk" => get_permalink(30)
 		],
 
 		[
@@ -37,7 +41,8 @@
 			"geo" => [50.874896513262314,36.411121499999915],
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_5"), 'full')[0],
 			"services" => explode(',', carbon_get_post_meta(21, "zap_services_5")),
-			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_5"))
+			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_5")),
+			"lnk" => get_permalink(32)
 		],
 
 		[
@@ -45,7 +50,8 @@
 			"geo" => [51.895887055330455,36.03093938084305],
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_6"), 'full')[0],
 			"services" => explode(',', carbon_get_post_meta(21, "zap_services_6")),
-			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_6"))
+			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_6")),
+			"lnk" => get_permalink(34)
 		],
 
 	];
@@ -76,9 +82,12 @@
 				?>
 					<div  class="addresses__block-item" data-adress="<?echo $element["adress"] ?>" data-koordinat="<?echo $element["geo"][0].", ".$element["geo"][1]; ?>">
 						<h5 class="addresses__block-item-title"><?echo $element["adress"]; ?></h5>
-						<? echo $services;?>
-						<br/>
-						<? echo $toplivo;?>
+						<div class = "usl_wrap">
+							<? echo $services;?>
+							<br/>
+							<? echo $toplivo;?>
+						</div>
+						<a class="to_azs_lnk" href="<?echo $element["lnk"]; ?>">На страницу АЗС &rarr;</a>
 					</div>
 				<?		
 					}

@@ -4728,6 +4728,10 @@ span[data-toplivo*="Газ"] {
   padding: 3px 10px;
 }
 
+.to_azs_lnk:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 600px) {
   .bascet_page_table .name {
     padding-left: 10px;
@@ -5342,7 +5346,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .addresses__block {
     border-radius: 0;
-    max-height: 260px;
+    max-height: unset;
     width: auto;
     flex-wrap: nowrap;
   }
@@ -5579,6 +5583,12 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     min-height: 220px;
     margin-right: 20px;
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .addresses__block-item .to_azs_lnk {
+    margin-top: auto;
   }
 
   .addresses__map {
