@@ -4361,7 +4361,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .gas-icon-block {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .gas-icon-block .our-gas__card-descpBlock {
@@ -4682,12 +4682,46 @@ span[data-toplivo*="Газ"] {
   background-color: #0070bf;
 }
 
+.service-icon-block__icon[data-servicename*="Туале"] {
+  background-image: url('img/services/wc.svg');
+}
+
+.service-icon-block__icon[data-servicename*="Магази"] {
+  background-image: url('img/services/market.svg');
+}
+
+.our-gas__card-descpBlock-icon[data-toplivoid*="92"] {
+  background-image: url('img/toplivo/92.svg');
+}
+
+.our-gas__card-descpBlock-icon[data-toplivoid*="95"] {
+  background-image: url('img/toplivo/95.svg');
+}
+
+.our-gas__card-descpBlock-icon[data-toplivoid*="ДТ"] {
+  background-image: url('img/toplivo/dt.svg');
+}
+
+.our-gas__card-descpBlock-icon[data-toplivoid*="Пропан"], 
+.our-gas__card-descpBlock-icon[data-toplivoid*="Метан"], 
+.our-gas__card-descpBlock-icon[data-toplivoid*="Газ"], 
+.our-gas__card-descpBlock-icon[data-toplivoid*="Газ"], 
+.our-gas__card-descpBlock-icon[data-toplivoid*="ДГК"], 
+.our-gas__card-descpBlock-icon[data-toplivoid*="СУГ"] 
+{
+  background-image: url('img/toplivo/gaz.svg');
+}
+
 .text_out {
   width: 100%;
 }
 
 .text_out p {
   margin: 1em 0;
+}
+
+.text_out h2 { 
+  font-size: 26px;
 }
 
 .text_out img {
@@ -4709,16 +4743,18 @@ span[data-toplivo*="Газ"] {
 }
 
 
-.price_table table tr:nth-child(2n-1) td {
+.price_table table tbody tr:nth-child(2n-1) td {
   background-color: #ebebeb;
 }
 
-.price_table table tr:first-child td {
+.price_table table thead th {
   background-color: lightgray;
 }
 
 
-.price_table table td {
+.price_table table td,
+.price_table table th 
+{
   border-bottom: 1px solid gray;
   border-left: 1px solid gray;
 }
@@ -4731,6 +4767,28 @@ span[data-toplivo*="Газ"] {
 
 .to_azs_lnk:hover {
   text-decoration: underline;
+}
+
+.usl_and_map {
+  width:100%;
+  display: flex;
+}
+
+.usl_and_map .usl_ .title-line{
+  margin: 28px 0 28px 0;
+}
+.usl_and_map .usl_ h2{
+  font-size: 28px;
+}
+
+.usl_and_map .usl_{ 
+  flex: 1;
+  margin-right: 10px;
+}
+
+.usl_and_map .map_{
+  flex: 1; 
+  margin-left: 10px;
 }
 
 @media (max-width: 600px) {
@@ -4876,10 +4934,28 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 }
 
 
+.curent_action {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.curent_action .form{
+  flex:1;
+  margin-right: 10px;
+}
 
 
+.curent_action .banner{
+  flex:3;
+  margin-left: 10px;
+}
 
 
+.red_lnk {
+  color:#D9000D;
+  text-decoration: underline;
+}
 
 
 
@@ -5476,6 +5552,28 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     right: 0;
     left: unset;
     top: -100px;
+  }
+
+  .usl_and_map {
+    flex-direction: column;
+  }
+
+  .usl_and_map .usl_ {
+    margin-right: 0;
+  }
+  .usl_and_map .map_ {
+    height: 300px;
+    min-height: 300px;
+    margin-left: 0;
+  }
+
+  .price_table {
+    margin-bottom: 10px;
+    overflow: auto;
+  }
+
+  .price_table::-webkit-scrollbar {
+    display: none;
   }
 }
 

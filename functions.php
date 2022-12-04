@@ -320,8 +320,18 @@ function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime = '' ){
 	return $data;
 }
 
+function get_price_table($price_str) {
+	$arr = explode(',', $price_str);
 
+	$result = [];
 
+	foreach($arr as $elem) {
+		$pp = explode('|', $elem);
+		$result[] = [$pp[0], $pp[1], $pp[2]];
+	}
+
+	return $result;
+}
 
 
 include "sender.php"

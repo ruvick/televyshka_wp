@@ -28,7 +28,7 @@
 								<input required type="text" name="name" data-valuem = "Имя" placeholder="Имя" class="popup__form-input input">
 								<input required type="tel" name="tel" data-valuem = "Телефон" placeholder="Телефон" class="popup__form-input input _phone"> 
 							</div>
-							<p class="popup__policy">Заполняя данную форму вы соглашаетесь с <a href="#">политикой
+							<p class="popup__policy">Заполняя данную форму вы соглашаетесь с <a class="red_lnk" href="<?echo get_the_permalink( 3 )?>">политикой
 									конфиденциальности</a></p>
 							<button type = "submit" class="popup__form-btn btn new_send_btn" data-formid = "request_call">Заказать</button>
 							</div>

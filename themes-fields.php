@@ -70,40 +70,54 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
   Container::make('post_meta', 'page-zapravki', 'Характеристики заправок')
   ->show_on_template(array('page-zapravki.php'))
       ->add_fields(array(   
-        Field::make('text', 'zap_addres_1', 'Адрес заправки 1' )->set_width(50),
-        Field::make('image', 'zap_img_1', 'Обложка заправки 1' )->set_width(50),
-        Field::make('text', 'zap_services_1', 'Услуги заправки 1' )->set_width(50),
-        Field::make('text', 'zap_toplivo_1', 'Топливо заправки 1' )->set_width(50),
+        Field::make('text', 'zap_id_1', 'id заправки' )->set_width(30),
+        Field::make('text', 'zap_addres_1', 'Адрес заправки 1' )->set_width(30),
+        Field::make('image', 'zap_img_1', 'Обложка заправки 1' )->set_width(30),
+        Field::make('text', 'zap_services_1', 'Услуги заправки 1' )->set_width(30),
+        Field::make('text', 'zap_toplivo_1', 'Топливо заправки 1' )->set_width(30),
+        Field::make('text', 'zap_geo_1', 'Координаты заправки' )->set_width(30),
 
-        Field::make('text', 'zap_addres_2', 'Адрес заправки 2' )->set_width(50),
-        Field::make('image', 'zap_img_2', 'Обложка заправки 2' )->set_width(50),
-        Field::make('text', 'zap_services_2', 'Услуги заправки 2' )->set_width(50),
-        Field::make('text', 'zap_toplivo_2', 'Топливо заправки 2' )->set_width(50),
+        Field::make('text', 'zap_id_2', 'id заправки' )->set_width(30),
+        Field::make('text', 'zap_addres_2', 'Адрес заправки 2' )->set_width(30),
+        Field::make('image', 'zap_img_2', 'Обложка заправки 2' )->set_width(30),
+        Field::make('text', 'zap_services_2', 'Услуги заправки 2' )->set_width(30),
+        Field::make('text', 'zap_toplivo_2', 'Топливо заправки 2' )->set_width(30),
+        Field::make('text', 'zap_geo_2', 'Координаты заправки' )->set_width(30),
         
-        Field::make('text', 'zap_addres_3', 'Адрес заправки 3' )->set_width(50),
-        Field::make('image', 'zap_img_3', 'Обложка заправки 3' )->set_width(50),
-        Field::make('text', 'zap_services_3', 'Услуги заправки 3' )->set_width(50),
-        Field::make('text', 'zap_toplivo_3', 'Топливо заправки 3' )->set_width(50),
+        Field::make('text', 'zap_id_3', 'id заправки' )->set_width(30),
+        Field::make('text', 'zap_addres_3', 'Адрес заправки 3' )->set_width(30),
+        Field::make('image', 'zap_img_3', 'Обложка заправки 3' )->set_width(30),
+        Field::make('text', 'zap_services_3', 'Услуги заправки 3' )->set_width(30),
+        Field::make('text', 'zap_toplivo_3', 'Топливо заправки 3' )->set_width(30),
+        Field::make('text', 'zap_geo_3', 'Координаты заправки' )->set_width(30),
         
-        Field::make('text', 'zap_addres_4', 'Адрес заправки 4' )->set_width(50),
-        Field::make('image', 'zap_img_4', 'Обложка заправки 4' )->set_width(50),
-        Field::make('text', 'zap_services_4', 'Услуги заправки 4' )->set_width(50),
-        Field::make('text', 'zap_toplivo_4', 'Топливо заправки 4' )->set_width(50),
+        Field::make('text', 'zap_id_4', 'id заправки' )->set_width(30),
+        Field::make('text', 'zap_addres_4', 'Адрес заправки 4' )->set_width(30),
+        Field::make('image', 'zap_img_4', 'Обложка заправки 4' )->set_width(30),
+        Field::make('text', 'zap_services_4', 'Услуги заправки 4' )->set_width(30),
+        Field::make('text', 'zap_toplivo_4', 'Топливо заправки 4' )->set_width(30),
+        Field::make('text', 'zap_geo_4', 'Координаты заправки' )->set_width(30),
 
-        Field::make('text', 'zap_addres_5', 'Адрес заправки 5' )->set_width(50),
-        Field::make('image', 'zap_img_5', 'Обложка заправки 5' )->set_width(50),
-        Field::make('text', 'zap_services_5', 'Услуги заправки 5' )->set_width(50),
-        Field::make('text', 'zap_toplivo_5', 'Топливо заправки 5' )->set_width(50),
+        Field::make('text', 'zap_id_5', 'id заправки' )->set_width(30),
+        Field::make('text', 'zap_addres_5', 'Адрес заправки 5' )->set_width(30),
+        Field::make('image', 'zap_img_5', 'Обложка заправки 5' )->set_width(30),
+        Field::make('text', 'zap_services_5', 'Услуги заправки 5' )->set_width(30),
+        Field::make('text', 'zap_toplivo_5', 'Топливо заправки 5' )->set_width(30),
+        Field::make('text', 'zap_geo_5', 'Координаты заправки' )->set_width(30),
 
-        Field::make('text', 'zap_addres_6', 'Адрес заправки 6' )->set_width(50),
-        Field::make('image', 'zap_img_6', 'Обложка заправки 6' )->set_width(50),
-        Field::make('text', 'zap_services_6', 'Услуги заправки 6' )->set_width(50),
-        Field::make('text', 'zap_toplivo_6', 'Топливо заправки 6' )->set_width(50),
+        Field::make('text', 'zap_id_6', 'id заправки' )->set_width(30),
+        Field::make('text', 'zap_addres_6', 'Адрес заправки 6' )->set_width(30),
+        Field::make('image', 'zap_img_6', 'Обложка заправки 6' )->set_width(30),
+        Field::make('text', 'zap_services_6', 'Услуги заправки 6' )->set_width(30),
+        Field::make('text', 'zap_toplivo_6', 'Топливо заправки 6' )->set_width(30),
+        Field::make('text', 'zap_geo_6', 'Координаты заправки' )->set_width(30),
   ));
 
   Container::make('post_meta', 'page-zapravka', 'Характеристики заправки')
   ->show_on_template(array('page-zapravka.php'))
     ->add_fields(array(   
+      
+      Field::make('text', 'zap_id', 'id заправки')->set_width(100),
       
       Field::make('rich_text', 'zap_price', 'Цены на топливо')->set_width(100),
 

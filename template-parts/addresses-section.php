@@ -1,56 +1,62 @@
 <?
 	$all_azs = [
 		[
+			"id" => carbon_get_post_meta(21, "zap_id_1"),
 			"adress" => "50 лет октября 124б",
-			"geo" => [51.75950488148242,36.1264498220901],
+			"geo" => explode(',', carbon_get_post_meta(21, "zap_geo_1")),
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_1"), 'full')[0],
 			"services" => explode(',', carbon_get_post_meta(21, "zap_services_1")),
-			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_1")),
+			"toplivo" => get_price_table(carbon_get_post_meta(21, "zap_toplivo_1")),
 			"lnk" => get_permalink(24)
 		],
 
 		[
+			"id" => carbon_get_post_meta(21, "zap_id_2"),
 			"adress" => "с. Беседино",
-			"geo" => [51.70449733129399,36.491601158874495],
+			"geo" => explode(',', carbon_get_post_meta(21, "zap_geo_2")),
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_2"), 'full')[0],
 			"services" => explode(',', carbon_get_post_meta(21, "zap_services_2")),
-			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_2")),
+			"toplivo" => get_price_table(carbon_get_post_meta(21, "zap_toplivo_2")),
 			"lnk" => get_permalink(26)
 		],
 
 		[
+			"id" => carbon_get_post_meta(21, "zap_id_3"),
 			"adress" => "Курск обл, д.Катырина д.74",
-			"geo" => [51.657612542767154,35.78915970301054],
+			"geo" => explode(',', carbon_get_post_meta(21, "zap_geo_3")),
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_3"), 'full')[0],
 			"services" => explode(',', carbon_get_post_meta(21, "zap_services_3")),
-			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_3")),
+			"toplivo" => get_price_table(carbon_get_post_meta(21, "zap_toplivo_3")),
 			"lnk" => get_permalink(28)
 		],
 
 		[
+			"id" => carbon_get_post_meta(21, "zap_id_4"),
 			"adress" => "ул.Аропортовская д25",
-			"geo" => [51.747753545949095,36.28037236441801],
+			"geo" => explode(',', carbon_get_post_meta(21, "zap_geo_4")),
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_4"), 'full')[0],
 			"services" => explode(',', carbon_get_post_meta(21, "zap_services_4")),
-			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_4")),
+			"toplivo" => get_price_table(carbon_get_post_meta(21, "zap_toplivo_4")),
 			"lnk" => get_permalink(30)
 		],
 
 		[
+			"id" => carbon_get_post_meta(21, "zap_id_5"),
 			"adress" => "Белгородская область, Яковлевский район, 633км",
-			"geo" => [50.874896513262314,36.411121499999915],
+			"geo" => explode(',', carbon_get_post_meta(21, "zap_geo_5")),
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_5"), 'full')[0],
 			"services" => explode(',', carbon_get_post_meta(21, "zap_services_5")),
-			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_5")),
+			"toplivo" => get_price_table(carbon_get_post_meta(21, "zap_toplivo_5")),
 			"lnk" => get_permalink(32)
 		],
 
 		[
+			"id" => carbon_get_post_meta(21, "zap_id_6"),
 			"adress" => "д. Курица",
-			"geo" => [51.895887055330455,36.03093938084305],
+			"geo" => explode(',', carbon_get_post_meta(21, "zap_geo_6")),
 			"img" =>  wp_get_attachment_image_src(carbon_get_post_meta(21, "zap_img_6"), 'full')[0],
 			"services" => explode(',', carbon_get_post_meta(21, "zap_services_6")),
-			"toplivo" => explode(',', carbon_get_post_meta(21, "zap_toplivo_6")),
+			"toplivo" => get_price_table(carbon_get_post_meta(21, "zap_toplivo_6")),
 			"lnk" => get_permalink(34)
 		],
 
@@ -77,7 +83,7 @@
 
 						for ($i = 0; $i < count($element["toplivo"]);  $i++)
 						{
-							$toplivo .= "<span class='all_azs_element toplivo_sp' data-toplivo='".$element["toplivo"][$i]."'>".$element["toplivo"][$i]."</span>";
+							$toplivo .= "<span class='all_azs_element toplivo_sp' data-toplivo='".$element["toplivo"][$i][0]."'>".$element["toplivo"][$i][0]." | ".$element["toplivo"][$i][1]."₽</span>";
 						}
 				?>
 					<div  class="addresses__block-item" data-adress="<?echo $element["adress"] ?>" data-koordinat="<?echo $element["geo"][0].", ".$element["geo"][1]; ?>">
@@ -99,7 +105,7 @@
 
 			<div class="addresses__column addresses__column_right">
 				<div id="map" class="addresses__map"></div>
-				<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script> 
+	 
 
 <script>
 
