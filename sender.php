@@ -1,31 +1,45 @@
 <?
 
-function message_to_telegram($text)
+function message_to_telegram($text, $file = null)
 {
 	$arr_chat = "381762556"; 
 	if($arr_chat) {
+
 
 		$arr_chat = explode(",",$arr_chat);
 	    $ch = curl_init();
 		
 		for ($i = 0; $i<count($arr_chat); $i++) {
-		    curl_setopt_array(
+			$sendingArray = array(
+				'chat_id' => trim($arr_chat[$i]),
+				'text' => $text
+			);
+
+			$sendStr = 'https://api.telegram.org/bot' . TG_TOKEN . '/sendMessage';
+			
+			if (!empty($file))
+			{
+				$sendStr = 'https://api.telegram.org/bot' . TG_TOKEN . '/sendPhoto';
+				$sendingArray["photo"] = curl_file_create($file);
+				$sendingArray["caption"] = $text;
+			
+			}
+
+			curl_setopt_array(
 		        $ch,
 		        array(
-		            CURLOPT_URL => 'https://api.telegram.org/bot' . TG_TOKEN . '/sendMessage',
+		            CURLOPT_URL => $sendStr,
 		            CURLOPT_POST => TRUE,
 		            CURLOPT_RETURNTRANSFER => TRUE,
 		            CURLOPT_TIMEOUT => 10,
-		            CURLOPT_POSTFIELDS => array(
-		                'chat_id' => trim($arr_chat[$i]),
-		                'text' => $text,
-		            ),
+		            CURLOPT_POSTFIELDS => $sendingArray,
 		        )
 		    );
 		    $output = curl_exec($ch);
 		}
 	}
 	
+	return $sendingArray;
 }
 
 // Универсальный отправщик
@@ -51,17 +65,25 @@ function newsendr()
 			$content_tg .= $_REQUEST["fildval"][$i].": ".$_REQUEST[$_REQUEST["fildname"][$i]]."\n\r";
 		}
 
-		message_to_telegram($content_tg);
+		
 
 		$headers = array(
 			'From: Сайт Телевышка <noreply@ultrakresla.ru>',
 			'content-type: text/html',
 		);
 
+		$fln = "";
+		if (!empty($_FILES['chek'])){
+			$fln = get_template_directory().'/download/'.$_FILES['chek']['name'];
+			$movrez = move_uploaded_file($_FILES['chek']['tmp_name'], $fln);
+		}
+
+		$mar = message_to_telegram($content_tg, $fln);
+		
 		add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
-		if (wp_mail($send_adr, $subj, $content, $headers))
+		if (wp_mail($send_adr, $subj, $content, $headers, $fln))
 		{
-			wp_die(true);
+			wp_die(json_encode($mar));
 		} else {
 			wp_die("NO ОК", '', 403 );
 		}

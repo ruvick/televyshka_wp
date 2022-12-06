@@ -35,16 +35,33 @@ function get_form_comment(form) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    var uploadField = document.getElementById("chek_input")
+
+    uploadField.onchange = function() {
+        let element = document.querySelector("#chek_input_label .text");
+        if(this.files[0].size > 2097152){
+            element.innerHTML = "Файл должен быть меньше 2 Мб"
+            this.value = "";
+        } else {
+            element.innerHTML = this.files[0].name
+        }
+    }
+
     let all_send_btn = document.querySelectorAll(".new_send_btn")
 
     for (let i = 0; i < all_send_btn.length; i++) {
         all_send_btn[i].addEventListener("click", function (e) {
             e.preventDefault()
+            
             let form_id = all_send_btn[i].dataset.formid;
             var form = document.getElementById(form_id);
             var data = new FormData(form);
 
             if (form_validation(form)) {
+                
+                console.log(123)
+
                 // let comment = JSON.stringify(get_form_comment(form))
                 // console.log(comment)  
 

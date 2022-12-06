@@ -42,11 +42,18 @@ get_header(); ?>
                                     <input type="hidden" name = "form_address" data-valuem = "Адрес страницы" value = "<? echo (is_home())?"https://tele-azs.ru":get_the_permalink()?>">
                                     <input required type="text" name="name" data-valuem = "Имя" placeholder="Имя" class="popup__form-input input">
                                     <input required type="tel" name="tel" data-valuem = "Телефон" placeholder="Телефон" class="popup__form-input input _phone"> 
-                                    <input required type="file" name="chek" data-valuem = "Чек" placeholder="Чек" class="popup__form-input input _file"> 
+                                    <div id="chek_input_label" class="file_wrapper">
+                                        <label for="chek_input">
+                                            <span class="icon"></span>
+                                            <span class="text">Прикрепить чек</span>
+                                        </label>
+                                        <input type="file" id="chek_input" name="chek" data-valuem = "Чек" placeholder="Чек" class="popup__form-input input _file" accept="image/png, image/jpeg"> 
+                                    </div>
+                                    
                                 </div>
                                 <p class="popup__policy">Заполняя данную форму вы соглашаетесь с <a  class="red_lnk"  href="<?echo get_the_permalink( 3 )?>">политикой
                                         конфиденциальности</a></p>
-                                <button type = "submit" class="popup__form-btn btn new_send_btn" data-formid = "request_call">Заказать</button>
+                                <button type = "submit" class="popup__form-btn btn new_send_btn" data-formid = "cur_action">Заказать</button>
                                 </div>
                 </form>
             </div>

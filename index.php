@@ -5,10 +5,11 @@
 <main class="page">
 
 <?php 
-		$banner = wp_get_attachment_image_src( carbon_get_theme_option('main-baner_img'), 'full')[0];
-			if(empty($banner)) {
+	$banner = wp_get_attachment_image_src( carbon_get_theme_option('main-baner_img'), 'full')[0];
+	if(empty($banner)) {
 		$banner = get_template_directory_uri() . '/img/main-banner.jpg';
-	} ?>
+	} 
+?>
 
 <section id="main-banner" class="main-banner" style="background-image: url(<?php echo $banner?>);">
 	<div class="main-banner__nuar_blk nuar_blk"></div> 
