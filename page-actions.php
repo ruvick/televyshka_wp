@@ -38,6 +38,7 @@ get_header(); ?>
                                 <div class="headen_form_blk">
 
                                 <div class="form__line">
+                                    <p class="uaction">Для участия в розыгрыше заполние форму и прикрепите чек:</p>
                                     <input type="hidden" name = "form_name" data-valuem = "Название формы" value = "Текущая акция">
                                     <input type="hidden" name = "form_address" data-valuem = "Адрес страницы" value = "<? echo (is_home())?"https://tele-azs.ru":get_the_permalink()?>">
                                     <input required type="text" name="name" data-valuem = "Имя" placeholder="Имя" class="popup__form-input input">
@@ -58,8 +59,8 @@ get_header(); ?>
                 </form>
             </div>
 
-            <div class="banner">
-
+            <div class="banner_action">
+                <img src="<?echo get_bloginfo('template_url')?>/img/action_50.jpg" alt="">
             </div>
         </div>
 

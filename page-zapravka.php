@@ -63,46 +63,71 @@ get_header(); ?>
 				<div class="recurring__title-line title-line"></div>
 
 				<div class="gas-icon-block d-flex">
-				<? 
+				
+				<div class="gas_price_table">
+					<div class="gpt_head">
+						<div class="gpt_line">
+							<div class="gpt_toplivo">
+								<h3>Вид топлива</h3>
+							</div>
+							<div class="gpt_price">
+								<img class="gray" src="<?echo get_bloginfo("template_url");?>/img/card_mini.jpg" alt="">
+								<p>Без карты</p>
+							</div>
+							<div class="gpt_price_card">
+								<img  src="<?echo get_bloginfo("template_url");?>/img/card_mini.jpg" alt="">
+								<p>По карте</p>
+							</div>
+						</div>
+					</div>
+
+					<? 
 					$zapFuel = get_price_table(carbon_get_post_meta(21, "zap_toplivo_".carbon_get_post_meta(get_the_ID(), "zap_id"))); 
 					if ($zapFuel) {
 						$zapFuelIndex = 0;
 							foreach ($zapFuel as $item) {
 							?>
-							<div class="our-gas__card-descpBlock">
-								<div class="our-gas__card-descpBlock-icon" data-toplivoid="<? echo $item[0]; ?>"></div>
-								<div class="our-gas__card-descpBlock-text"><? echo $item[0]; ?></div>
-							</div>
+								<div class="gpt_body">
+									<div class="gpt_line">
+										<?
+											if (mb_strripos($item[0], "92") != false ) get_template_part('template-parts/t-92');
+											if (mb_strripos($item[0], "95") != false ) get_template_part('template-parts/t-95');
+											if (mb_strripos($item[0], "ДТ") != false ) get_template_part('template-parts/t-DT');
+											if (mb_strripos($item[0], "ГАЗ") != false ) get_template_part('template-parts/t-g');
+											if (mb_strripos($item[0], "ДГК") != false ) get_template_part('template-parts/t-dgk');
+										?>
+										
+										
+
+										<div class="gpt_price"><? echo $item[1]; ?></div>
+										<div class="gpt_price_card"><? echo $item[2]; ?></div>
+									</div>	
+								</div>
 							<?
 							$zapFuelIndex++; 
 						}
 					}
 				?>
+					
 
 				</div>
 
-				<div class="price_table">
-					<table>
-						<thead>
-							<tr>
-								<th>Топливо</th>
-								<th>Цена</th>
-								<th>Цена по карте</th>
-							</tr>
-						</thead>
-						<tbody>
-							<?  foreach ($zapFuel as $item) { ?>
-								<tr>
-									<td><?echo $item[0]?></td>
-									<td><?echo $item[1]?></td>
-									<td><?echo $item[2]?></td>
-								</tr>
-							<?
-							}
-							?>
-							
-						</tbody>
-					</table>
+				<? 
+					// $zapFuel = get_price_table(carbon_get_post_meta(21, "zap_toplivo_".carbon_get_post_meta(get_the_ID(), "zap_id"))); 
+					// if (!$zapFuel) {
+					// 	$zapFuelIndex = 0;
+					// 		foreach ($zapFuel as $item) {
+					// 		?>
+					 		<!-- <div class="our-gas__card-descpBlock">
+					 			<div class="our-gas__card-descpBlock-icon" data-toplivoid="<? echo $item[0]; ?>"></div>
+					 			<div class="our-gas__card-descpBlock-text"><? echo $item[0]; ?></div>
+					 		</div> -->
+					 		<?
+					// 		$zapFuelIndex++; 
+					// 	}
+					// }
+				?>
+
 				</div>
 
 			</div>

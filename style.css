@@ -4668,7 +4668,7 @@ span[data-toplivo*="ДТ"] {
 }
 
 span[data-toplivo*="92"] {
-  background-color: #d9000d;
+  background-color: #0155aa;
 }
 
 span[data-toplivo*="95"] {
@@ -4676,10 +4676,14 @@ span[data-toplivo*="95"] {
 }
 
 span[data-toplivo*="СУГ"],
-span[data-toplivo*="ДГК"],
 span[data-toplivo*="ГАЗ"],
 span[data-toplivo*="Газ"] {
-  background-color: #0070bf;
+  background-color: #ffff00;
+  color:black;
+}
+
+span[data-toplivo*="ДГК"] {
+  background-color:#d9000d;
 }
 
 .service-icon-block__icon[data-servicename*="Туале"] {
@@ -4995,6 +4999,155 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   display: none;
 }
 
+.gas_price_table {
+  width:100%;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gpt_price,
+.gpt_price_card,
+.gas_price_table h3 { 
+  line-height: inherit;
+  font-size: 22px;
+}
+
+.gpt_head {
+  width:100%
+}
+
+.gpt_head .gpt_price,
+.gpt_head .gpt_price_card
+{ 
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+.gpt_head p {
+  font-size: 12px;
+  line-height: 1;
+  margin: auto;
+}
+
+.gpt_head img {
+  width:50px;
+  height:auto;
+  margin: auto;
+}
+
+.gpt_head img.gray { 
+  filter: grayscale(100%);
+}
+
+.gpt_line {
+  display: flex;
+  width:100%;
+  flex-wrap: wrap;
+}
+
+.gpt_toplivo {
+  width:200px;
+} 
+
+.gpt_price,
+.gpt_price_card
+{
+  width:100px;
+} 
+
+
+.gpt_toplivo, 
+.gpt_price,
+.gpt_price_card
+{
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  line-height: 70px;
+  text-align: center;
+  height: 70px;
+}
+
+
+
+.gpt_body .gpt_toplivo.t_92 { 
+  background-color: #0155aa;
+  color:white
+}
+
+.gpt_body .gpt_toplivo.t_95 { 
+  background-color: #01583c;
+  color:white
+}
+
+.gpt_body .gpt_toplivo.t_dt { 
+  background-color: #151513;
+  color:white
+}
+
+.gpt_body .gpt_toplivo.t_g p,
+.gpt_body .gpt_toplivo.t_dgk p
+{
+  width: 100%;
+} 
+.gpt_body .gpt_toplivo.t_g { 
+  background-color: #ffff00;
+  color:black;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.gpt_body .gpt_toplivo.t_dgk { 
+  background-color: #d9000d;
+  color:black;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.gpt_body .gpt_toplivo { 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gpt_toplivo_index {
+  font-size: 64px;
+  margin-right: 5px;
+  line-height: 1;
+  width:100px;
+  text-align: center;
+}
+
+.gpt_toplivo_descr {
+  width:90px;
+  display: flex;
+  line-height: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.gpt_toplivo_descr span:first-child{
+  font-size: 28px;
+}
+
+.gpt_toplivo_descr span:last-child{
+  font-size: 18px;
+}
+
+.uaction {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.banner_action img {
+  width:100%;
+  height: auto;
+}
 
 
 @media (min-width: 991.98px) {
@@ -5062,6 +5215,10 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .our-gas__card {
     margin-right: 23px;
+  }
+
+  .curent_action .banner_action {
+    flex:2
   }
 }
 
@@ -5514,6 +5671,14 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   .banner {
     min-height: 150px;
   }
+
+  .curent_action {
+    flex-direction: column;
+  }
+
+  .curent_action .banner_action { 
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -5689,6 +5854,48 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     padding: 12px 25px 12px 35px;
     margin-left: -15px;
   }
+
+  .gpt_toplivo {
+    width: 140px;
+  }
+
+  .gpt_price, .gpt_price_card {
+    width: 70px;
+  }
+
+  .gpt_price, .gpt_price_card, .gas_price_table h3 {
+    font-size: 16px;
+  }
+
+  .gpt_toplivo_index  {
+    width: 60px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .gpt_toplivo_descr {
+    width: 68px;
+  }
+  
+  .gpt_toplivo_descr span:first-child {
+    font-size: 20px;
+  }
+
+  .gpt_toplivo_descr span:last-child {
+    font-size: 12px;
+  }
+
+  .gpt_body .gpt_toplivo,
+  .gpt_body .gpt_price, 
+  .gpt_body .gpt_price_card
+  {
+    height: 50px;
+    line-height: 50px;
+  }
+
+
+
+
 }
 
 @media (max-width: 414px) {
