@@ -54,7 +54,7 @@ get_header(); ?>
                                 </div>
                                 <p class="popup__policy">Заполняя данную форму вы соглашаетесь с <a  class="red_lnk"  href="<?echo get_the_permalink( 3 )?>">политикой
                                         конфиденциальности</a></p>
-                                <button type = "submit" class="popup__form-btn btn new_send_btn" data-formid = "cur_action">Заказать</button>
+                                <button type = "submit" class="popup__form-btn btn new_send_btn" data-formid = "cur_action">Отправить</button>
                                 </div>
                 </form>
             </div>
