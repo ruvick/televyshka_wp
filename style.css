@@ -5676,6 +5676,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     flex-direction: column;
   }
 
+  .curent_action .form { 
+    margin-right: 0;    
+  }
   .curent_action .banner_action { 
     margin-top: 20px;
   }

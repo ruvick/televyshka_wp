@@ -62,7 +62,10 @@ get_header(); ?>
             <div class="banner_action">
                 <img src="<?echo get_bloginfo('template_url')?>/img/action_50.jpg" alt="">
             </div>
+            
         </div>
+        <br/>
+        <p><strong>Условия акции:</strong> Для участия в акции Вам необходимо заправится на 500 рублей и более на заправке по адресу <a href="https://tele-azs.ru/nashi-azs/kursk-ul-aroportovskaya-d25/">г. Курск, ул. Аропортовская д. 25</a> на полученом чеке написать свое имя и телефон сфотографировать чек и отправить его с помощю формы на этой странице. После этого бросить его в лототрон у кассира на азс. </p>
 
 	</div>
 </section>
