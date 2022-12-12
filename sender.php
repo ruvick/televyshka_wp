@@ -2,7 +2,7 @@
 
 function message_to_telegram($text, $file = null)
 {
-	$arr_chat = "381762556"; 
+	$arr_chat = "381762556,5936804355"; 
 	if($arr_chat) {
 
 
