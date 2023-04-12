@@ -5010,7 +5010,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 .gpt_price_card,
 .gas_price_table h3 { 
   line-height: inherit;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .gpt_head {
@@ -5055,7 +5055,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 .gpt_price,
 .gpt_price_card
 {
-  width:100px;
+  width:200px;
 } 
 
 
@@ -5859,19 +5859,23 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   }
 
   .gpt_toplivo {
-    width: 140px;
+    width: 100px;
   }
 
-  .gpt_price, .gpt_price_card {
-    width: 70px;
+  .gpt_price{
+    width: 60px;
+  } 
+  
+  .gpt_price_card {
+    width: 120px;
   }
 
   .gpt_price, .gpt_price_card, .gas_price_table h3 {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .gpt_toplivo_index  {
-    width: 60px;
+    width: 100%;
     font-size: 42px;
     line-height: 50px;
   }

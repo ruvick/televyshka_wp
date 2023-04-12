@@ -16,7 +16,7 @@
     "send_func": "scp -C functions.php xle2012z_televyshka@xle2012z.beget.tech:tele-azs.ru//public_html/wp-content/themes/televyshka/",
     "send_futt": "scp -C footer.php xle2012z_televyshka@xle2012z.beget.tech:tele-azs.ru//public_html/wp-content/themes/televyshka/",
     "mk_part_carbon": "ssh xle2012z_televyshka@xle2012z.beget.tech \"mkdir -p tele-azs.ru//public_html/wp-content/themes/televyshka/inc\"",
-    "send_carbon": "scp -C -r inc xle2012z_televyshka@xle2012z.beget.tech:tele-azs.ru//public_html/wp-content/themes/televyshka/",
+    "send_carbon": "scp -C -r carbon-fields xle2012z_televyshka@xle2012z.beget.tech:tele-azs.ru//public_html/wp-content/themes/televyshka/",
     "send_carbon_fild": "scp -C -r inc/custom-fields-options xle2012z_televyshka@xle2012z.beget.tech:tele-azs.ru//public_html/wp-content/themes/televyshka/inc/",
     "mk_part_dir": "ssh xle2012z_televyshka@xle2012z.beget.tech \"mkdir -p tele-azs.ru//public_html/wp-content/themes/televyshka/template-parts\"",
     "send_part": "scp -C -r template-parts xle2012z_televyshka@xle2012z.beget.tech:tele-azs.ru//public_html/wp-content/themes/televyshka/",
